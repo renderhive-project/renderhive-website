@@ -40,7 +40,7 @@ export default function Home() {
         title="This Hive is Under Construction">
         The Renderhive project is new and currently under development. The following timeline gives a brief summary of our roadmap. You can follow all developments in detail on the project's Github repositories.
         <a
-          href="https://github.com/renderhive-io/"
+          href="https://github.com/renderhive-projects/"
           target="_blank"
           rel="noopener"
           className="group flex justify-center py-4 items-center mx-auto space-x-2 text-gray-500 dark:text-gray-400">

@@ -25,7 +25,7 @@ export default function Hero() {
               Whitepaper <p className="text-xs"><i>Coming Soon</i></p>
             </a>
             <a
-              href="https://github.com/renderhive-io/"
+              href="https://github.com/renderhive-projects/"
               target="_blank"
               rel="noopener"
               className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
