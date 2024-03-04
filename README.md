@@ -1,25 +1,30 @@
-# Renderhive Website
+# React + TypeScript + Vite
 
-## About the Renderhive Project
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This project was created to establish the first fully decentralized crowdrendering platform for [Blender](https://www.blender.org) built on the Web3 technologies of [Hedera Hashgraph](https://www.hedera.com/) and [IPFS](https://ipfs.tech) / [Filecoin](https://filecoin.io). The aim is to gather the latent CPU/GPU power of the Blender community by creating a free marketplace where Blender artists can buy and sell rendering time on each others computers in times they don't need it for their own projects.
+Currently, two official plugins are available:
 
-Please visit [https://www.renderhive.io](https://www.renderhive.io) to learn more about the project.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Contact
+## Expanding the ESLint configuration
 
-* **Project Coordination:** Christian Stolze
-* **Contact:** contact@renderhive.io
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## About this repository
+- Configure the top-level `parserOptions` property like this:
 
-This repository contains the first version of the landing page of the [Renderhive project](https://www.renderhive.io).
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-### Based on Nextly - Landing Page Template with Next.js & Tailwind CSS
-
-Nextly is a free landing page & marketing website template for  startups and indie projects. Its built with Next.js & TailwindCSS.
-
-![image](https://user-images.githubusercontent.com/1884712/121497169-03228680-c990-11eb-975a-e77fddc43de0.png)
-
-* **Template author:** Surjith S M ( [@surjithctly](https://surjithctly.in/) )
-* **Template License:** [MIT License](https://www.renderhive.io)
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
