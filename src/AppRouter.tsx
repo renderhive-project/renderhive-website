@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Outlet, Navigate, useLocation } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 // Pages
 import LandingPage from "./pages/landing-page/LandingPage";
@@ -17,20 +17,23 @@ const NAVIGATION_MENU_ITEMS = [
 export default function AppRouter() {
 
   const Layout = () => {
-    const location = useLocation();
+    // const location = useLocation();
 
     return (
-      <div id="section-hero" className="relative bg-primary-dark">
+      <>
+        <div className="relative flex flex-col bg-primary-dark">
 
-        {/* Navigation Bar */}
-        <NavBar navItems={NAVIGATION_MENU_ITEMS} />
-        
-        {/* Web Content */}
-        <Outlet />
+          {/* Navigation Bar */}
+          <NavBar navItems={NAVIGATION_MENU_ITEMS} />
+          
+          {/* Web Content */}
+          <Outlet />
+          
+        </div>
 
         {/* Footer */}
         <Footer />
-      </div>
+      </>
     );
   };
 
