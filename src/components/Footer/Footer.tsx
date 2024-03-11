@@ -1,27 +1,31 @@
 // images
 import HoneycombPatternSection from "@assets/honeycomb_pattern_sections.svg?react";
+import FilecoinFoundationLogo from "@assets/logo_filecoin_foundation.svg?react";
 
 // icons
-import IconRenderNodes from "@assets/icons/icon-bee.svg?react";
-import IconClientNodes from "@assets/icons/icon-honeycombs.svg?react";
 
 const Footer = () => {
 
     return (
         <div id="footer" className="relative flex justify-center">
 
-            <div className="relative bg-red flex flex-col max-w-8xl mx-0 p-8 items-center mt-36 ">
+            <div className="relative flex flex-col max-w-8xl mx-6 items-center mt-36">
 
-                {/* <!-- Section Header --> */}
-                <div className="w-[80%] sm:w-[63%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
-                    <div className="p-4">
-                        <span className="rounded-full bg-secondary-dark px-4 py-2 text-sm text-secondary">Supported By</span>
+                {/* <!-- Supporters – Filecoin Foundation --> */}
+                <div className="mx-6 items-center z-10">
+                    <div className="flex flex-col items-center p-12 space-y-4">
+                        <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">
+                            Supported By
+                        </span>
+                        <a href="https://fil.org">
+                            <FilecoinFoundationLogo className="h-12 w-36 text-white hover:text-secondary-mid"/>
+                        </a>
                     </div>
                 </div>
 
                 {/* <!-- Footer Content --> */}
-                <div className="w-screen z-10 border-t border-secondary ">
-                    <h2 className="mt-10 text-xl text-white ">Footer</h2>
+                <div className="w-full border-t border-secondary z-10">
+                    <h2 className="mt-10 text-xl text-white "></h2>
                     {/* <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The storage capacity and rendering power of the hive is distributed on the computers of all participating Blender users – for a maximum of availability. This is possible by the underlying blockchain technology of Hedera Hashgraph and IPFS / Filecoin.</p> */}
                 </div>
 
