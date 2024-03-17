@@ -55,7 +55,7 @@ const HeroSection = () => {
                     <div className="lg:border-t border-secondary text-left lg:p-4">
                         <IconDecentralized className="my-6 w-12 h-12 text-secondary" />
                         <h2 className="mt-2 text-xl text-white ">Fully Decentralized</h2>
-                        <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The storage capacity and rendering power of the hive is distributed on the computers of all participating users – for a maximum of availability and stability. This is possible by the underlying blockchain technology of Hedera Hashgraph and IPFS / Filecoin.</p>
+                        <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The storage capacity and rendering power of the hive is distributed on the computers of all participating users – for a maximum of availability and stability. This is possible due to the underlying blockchain technology of Hedera Hashgraph and IPFS / Filecoin.</p>
                     </div>
                     <div className="lg:border-t border-secondary text-left lg:p-4">
                         <IconCoin className="my-6 w-12 h-12 text-secondary" />
