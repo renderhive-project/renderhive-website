@@ -22,6 +22,7 @@ export default {
         'dark': '#060D15',
         'mid-dark': '#0B141D',
         'main': '#0F1A24',
+        'light': '#2A3642',
         'navy': '#182A37',
         'mid-grey': '#293642',
         'light-grey': '#A0A5AA',
@@ -62,6 +63,7 @@ export default {
       },
       boxShadow: {
         'navbar': '0 10px 100px #47A3D711',
+        'timeline': '0 0 10px #ED9C11',
       },
     },
     darkSelector: '.dark',
