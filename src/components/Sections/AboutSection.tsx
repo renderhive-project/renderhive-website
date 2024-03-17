@@ -1,3 +1,6 @@
+// components
+import { StatsGrid, StatsRow, StatsCard } from "../StatsGrid/StatsGrid";
+
 // images
 import HoneycombPatternSection from "@assets/honeycomb_pattern_sections.svg?react";
 import HoneycombBlockchain from "@assets/web3_services_honeycomb_blockchain.svg?react";
@@ -12,6 +15,11 @@ import IconIPFS from "@assets/icons/icon-ipfs.svg?react";
 import IconFilecoin from "@assets/icons/icon-filecoin.svg?react";
 
 const AboutSection = () => {
+    function getRandomInt(min: number, max: number) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
 
     return (
         <div id="section-about" className="relative w-screen flex justify-center overflow-hidden pb-96 sm:pb-96">
@@ -85,39 +93,39 @@ const AboutSection = () => {
 
                         {/* Individual Web3 Services */}
                         <div className="lg:mx-0 xl:mx-20 flex-none lg:flex justify-between lg:space-x-10 space-y-10 lg:space-y-0">
-                            <a href="https://www.hedera.com/" target="_blank" rel="noopener noreferrer" className="flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
+                            <a href="https://www.hedera.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
                                 <IconHedera className="w-12 h-12 text-secondary" />
                                 <h2 className="text-lg text-white ">Hedera Hashgraph</h2>
                                 <p className="flex-grow text-sm sm:text-base text-main">
                                     Hedera's distributed ledger technology offers an enterprise-grade, carbon-negative technology stack and is built with a sustainable long-term vision. It offers low, predictable network fees and its unique consensus mechanism ensures a fair, verifiable ordering of our render jobs and a secure payment system. It's native cryptocurrency, hbar (ħ), is used as the currency in our hive to buy and sell render power.
                                 </p>
-                                <p className="text-sm sm:text-base text-white hover:text-secondary-mid">
+                                <p className="text-sm sm:text-base text-white group-hover:text-secondary-mid">
                                     <span className="py-2 border-b border-secondary">
                                         Learn More <span aria-hidden="true">→</span>
                                     </span>
                                 </p>
                             </a>
 
-                            <a href="https://www.ipfs.io/" target="_blank" rel="noopener noreferrer" className="flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
+                            <a href="https://www.ipfs.io/" target="_blank" rel="noopener noreferrer" className="group flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
                                 <IconIPFS className="w-12 h-12 text-secondary" />
                                 <h2 className="text-lg text-white ">Interplanatary File System (IPFS)</h2>
                                 <p className="flex-grow text-sm sm:text-base text-main">
                                 The InterPlanetary File System is a distributed data storage and transfer protocol. Its unique content-addressing approach locates files not by their storage location, but by their content. This makes sure that files are accessible by all nodes and guarentees that all nodes get the exact same file. In connection with Hedera Hashgraph, it also provides copyright proofs for all Blender files submitted to our renderhive.
                                 </p>
-                                <p className="text-sm sm:text-base text-white hover:text-secondary-mid">
+                                <p className="text-sm sm:text-base text-white group-hover:text-secondary-mid">
                                     <span className="py-2 border-b border-secondary">
                                         Learn More <span aria-hidden="true">→</span>
                                     </span>
                                 </p>
                             </a>
 
-                            <a href="https://www.filecoin.io/" target="_blank" rel="noopener noreferrer" className="flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
+                            <a href="https://www.filecoin.io/" target="_blank" rel="noopener noreferrer" className="group flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
                                 <IconFilecoin className="w-12 h-12 text-secondary" />
                                 <h2 className="text-lg text-white ">Filecoin</h2>
                                 <p className="flex-grow text-sm sm:text-base text-main">
                                 Filecoin is a blockchain that is build on top of the IPFS. It adds an incentive system to IPFS, which enables a verifiable and redundant long-term storage of files by paying nodes for storing the data. Basically, we utilize it as the 'honeycombs' in our hive, where important data is stored until it's needed by the nodes.
                                 </p>
-                                <p className="text-sm sm:text-base text-white hover:text-secondary-mid">
+                                <p className="text-sm sm:text-base text-white group-hover:text-secondary-mid">
                                     <span className="py-2 border-b border-secondary">
                                         Learn More <span aria-hidden="true">→</span>
                                     </span>
@@ -127,11 +135,13 @@ const AboutSection = () => {
                     </div>
                 </div>
 
+
+
                 {/* <!-- Section Subheader: A Hive Without Queen --> */}
                 <div className="w-[80%] sm:w-[80%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
-                    <div className="p-4">
+                    {/* <div className="p-4">
                         <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">Decentralization</span>
-                    </div>
+                    </div> */}
                     <h1 className="text-lg leading-10 sm:leading-12 sm:text-2xl md:text-3xl md:leading-12 lg:text-3xl lg:leading-12 xl:text-4xl xl:leading-15 text-white">
                     A Hive Without Queen
                     </h1>
@@ -139,6 +149,7 @@ const AboutSection = () => {
                     Unlike conventional render farms, the renderhive is not coordinated by a central authority or middle-man that mediates between the render and client nodes with centralized servers. It is a peer-to-peer network that is managed by rules written into the code of the decentralized Renderhive Service App and the project's smart contracts.
                     </p>
                 </div>
+
 
 
                 {/* <!-- Section Content: Software Components --> */}
@@ -174,6 +185,44 @@ const AboutSection = () => {
 
                     </div>
                 
+                </div>
+
+
+
+                {/* <!-- Section Subheader: Network Statistics --> */}
+                <div className="relative w-[80%] sm:w-[80%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
+                    <div className="p-4">
+                        <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">Coming Soon</span>
+                    </div>
+                    <h1 className="text-lg leading-10 sm:leading-12 sm:text-2xl md:text-3xl md:leading-12 lg:text-3xl lg:leading-12 xl:text-4xl xl:leading-15 text-white">
+                    Network Statistics
+                    </h1>
+                    <p className="text-md sm:text-base text-main leading-6">
+                    These are some of the real-time numbers of the Renderhive network. The numbers are constantly changing as nodes go on-/offline, render jobs are submitted or finalized, payments are made, etc. 
+                    <br/><span className="text-secondary">Please note that the hive is <b>not</b> launched yet and numbers are only for illustration.</span>
+                    </p>
+                </div>
+
+                {/* <!-- Section Content: Network Statistics --> */}
+                <div className="relative w-full z-10">
+                    <div className="lg:mx-0 xl:mx-20 flex-none justify-between lg:space-x-10 space-y-10 lg:space-y-0">
+
+                        <StatsGrid>
+                            <StatsRow classNames="grid-cols-2 lg:grid-cols-6">
+                                <StatsCard title="Total Render Power" value={getRandomInt(10000, 10000000)} className="col-span-2" unit="BBP" tooltip="The cumulative Blender benchmark scores of all active render nodes." />
+                                <StatsCard title="Active Render Nodes" value={getRandomInt(3, 5000)} className="col-span-1" tooltip="A node is considered active, if it offered it's render power in this hive cycle or is currently busy rendering."/>
+                                <StatsCard title="Active Render Jobs" value={getRandomInt(1, 500)} className="col-span-1" tooltip="The number of render jobs, which are currently rendered or waiting to be rendered."/>
+                                <StatsCard title="Remaining frames" value={getRandomInt(1, 100000)} className="col-span-2" tooltip="The number of frames in all currently active render jobs that still need to be rendered."/>
+                            </StatsRow>
+                            <StatsRow classNames="grid-cols-2 lg:grid-cols-7">
+                                <StatsCard title="Current Hive Cycle" value={getRandomInt(1, 999999)} className="col-span-2" tooltip="The render hive distributes render jobs in rounds – these rounds are called hive cycles. Each hive cycle lasts 5 min." />
+                                <StatsCard title="Total Earnings" value={getRandomInt(1000000, 10000000)} unit="USD" className="col-span-2 lg:col-span-3" tooltip="The total earnings of all render nodes since the hive went online (in United States Dollar)."/>
+                                <StatsCard title="Total Value Locked" value={getRandomInt(10*5, 500*5 + 10000)} unit="USD" className="col-span-2 lg:col-span-2" tooltip="The total value currently locked in the Renderhive smart contract for staking and render job escrows (in United States Dollar)."/>
+                            </StatsRow>
+                        </StatsGrid>
+
+                    </div>
+
                 </div>
             </div>
 
