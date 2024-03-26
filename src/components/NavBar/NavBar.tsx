@@ -9,12 +9,41 @@ import RenderhiveLogo from "@assets/logo.svg?react";
 type NavItem = {
     href: string;
     label: string;
+    threshold: number;
 };
 
 const NavBar = ({ navItems }: { navItems: NavItem[] }) => {
     const [scrollPos, setScrollPos] = useState(0);
     const [activeSection, setActiveSection] = useState('');
-    const [isOpen, setIsOpen] = useState(false); // Add this line
+    const [isOpen, setIsOpen] = useState(false);
+    const [navbarHeight, setNavbarHeight] = useState(0);
+
+
+    // get the height of the navbar
+    useEffect(() => {
+
+        // calculate the navbar height
+        const navbarHeight = document.querySelector('header')?.offsetHeight || 0;
+
+        const navbar = document.querySelector('header');
+        if (navbar) {
+            setNavbarHeight(navbarHeight);
+        }
+    }, []);
+
+    // handle click event of navigation items
+    const handleClick = (href: string) => {
+
+        const element = document.querySelector(href);
+        if (element) {
+            window.scroll({
+                top: element.getBoundingClientRect().top + window.scrollY - navbarHeight,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+
 
     // handle scroll event to change the background color of the navbar and add a blur effect
     const maxScrollPos = 75; // adjust this value to your needs
@@ -35,33 +64,36 @@ const NavBar = ({ navItems }: { navItems: NavItem[] }) => {
     // detect the current section to mark the navigation items accordingly
     useEffect(() => {
 
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                        console.log(activeSection);
-                    } else {
-                        setActiveSection('');
-                    }
-                });
-            },
-            { threshold: 0.25 } // the observer is triggered, as soon as XX% of the element is visible
-        );
+        // create an array that also contains the hero section to make sure 
+        // all elements are deactivated when the hero section is displayed
+        const allItems = [
+            { href: '#section-hero', label: 'Hero', threshold: 0.50 },
+            ...navItems
+        ];
 
-        navItems.forEach(item => {
+        const observers = allItems.map(item => {
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.intersectionRatio > item.threshold) {
+                            setActiveSection(entry.target.id);
+                        }
+                    });
+                },
+                { threshold: item.threshold }
+            );
+
             const element = document.querySelector(item.href);
             if (element) {
                 observer.observe(element);
             }
+
+            return observer;
         });
 
         return () => {
-            navItems.forEach(item => {
-                const element = document.querySelector(item.href);
-                if (element) {
-                    observer.unobserve(element);
-                }
+            observers.forEach(observer => {
+                observer.disconnect();
             });
         };
     }, [navItems]);
@@ -92,21 +124,22 @@ const NavBar = ({ navItems }: { navItems: NavItem[] }) => {
                                 {/* Current: "border-b-2 border-secondary", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
 
                                 {navItems.map((link, index) => (
-                                        <a key={index} href={link.href} 
-                                            className={
-                                                link.href === `#${activeSection}`
-                                                    ? "inline-flex items-center border-b-2 border-secondary px-1 pt-1 text-sm font-medium text-secondary hover:border-secondary hover:text-secondary-mid"
-                                                    : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-main hover:border-secondary hover:text-secondary-mid"
-                                            }
-                                        >
-                                            {link.label}
-                                        </a>
+                                    <a key={index} href={link.href} 
+                                        onClick={() => handleClick(link.href)}
+                                        className={
+                                            link.href === `#${activeSection}`
+                                                ? "inline-flex items-center border-b-2 border-secondary px-1 pt-1 text-sm font-medium text-secondary hover:border-secondary hover:text-secondary-mid cursor-pointer"
+                                                : "inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-main hover:border-secondary hover:text-secondary-mid cursor-pointer"
+                                        }
+                                    >
+                                        {link.label}
+                                    </a>
                                 ))}
 
                             </div>
                             <div className="hidden lg:block lg:justify-end">
                                 <button type="button" className="inline-flex items-center justify-center rounded-md py-2.5 px-8 bg-secondary hover:bg-secondary-mid font-semibold text-sm leading-6 text-primary-dark">
-                                    Sign In
+                                    Connect Wallet
                                 </button>
                             </div>
 
@@ -133,20 +166,20 @@ const NavBar = ({ navItems }: { navItems: NavItem[] }) => {
                                     <Disclosure.Button
                                         as="a"
                                         key={index}
-                                        href={link.href}
+                                        onClick={() => handleClick(link.href)}
                                         className={
                                             link.href === `#${activeSection}`
-                                                ? "block border-r-4 border-secondary py-2 pl-3 pr-4 text-base font-medium text-secondary hover:border-secondary-mid hover:text-secondary-mid"
-                                                : "block border-r-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-main hover:border-secondary-mid hover:text-secondary-mid"
+                                                ? "block border-r-4 border-secondary py-2 pl-3 pr-4 text-base font-medium text-secondary hover:border-secondary-mid hover:text-secondary-mid cursor-pointer"
+                                                : "block border-r-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-main hover:border-secondary-mid hover:text-secondary-mid cursor-pointer"
                                         }
                                         
                                     >
                                         {link.label}
                                     </Disclosure.Button>
                                 ))}
-                                <div className="block border-r-4 border-transparent">
+                                <div className="block border-r-4 border-transparent pt-6">
                                     <button type="button" className="inline-flex items-center justify-center rounded-md py-2.5 px-8 bg-secondary hover:bg-secondary-mid font-semibold text-sm leading-6 text-primary-dark">
-                                        Sign In
+                                        Connect Wallet
                                     </button>
                                 </div>
                             

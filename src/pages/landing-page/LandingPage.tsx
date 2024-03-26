@@ -2,8 +2,9 @@ import "./landing-page.scss"
 
 // import sections
 import HeroSection from "../../components/Sections/HeroSection"
-import AboutSection from "../../components/Sections/AboutSection"
+import AboutSection from "../../components/Sections/HowItWorksSection"
 import RoadmapSoftwareSection from "../../components/Sections/RoadmapSoftwareSection"
+import FaqSection from "../../components/Sections/FaqSection"
 
 const LandingPage = () => {
   return (
@@ -12,6 +13,7 @@ const LandingPage = () => {
       <HeroSection/>
       <AboutSection/>
       <RoadmapSoftwareSection/>
+      <FaqSection/>
 
     </main>
   )

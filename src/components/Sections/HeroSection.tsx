@@ -33,10 +33,10 @@ const HeroSection = () => {
                             Crowdrendering
                             for Blender
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-main text-left">Renderhive is going to be the first fully decentralized render farm for Blender built on Web3 technologies. It will rely on the render power of Blender artists participating in the hive.</p>
+                        <p className="mt-6 text-lg leading-8 text-main text-left">Renderhive is going to be the first fully decentralized render farm for Blender built on Web3 technologies. It will rely on the render power of Blender artists and enthusiasts participating in the hive.</p>
                         <div className="mt-10 flex items-center gap-x-6">
                             <button type="button" className="inline-flex items-center justify-center rounded-md py-2.5 px-8 bg-secondary hover:bg-secondary-mid font-semibold text-sm leading-6 text-primary-dark">
-                            Sign In
+                            Get Started
                             </button>
                             <a href="https://renderhive-project.gitbook.io/renderhive-whitepaper/" className="text-sm font-semibold leading-6 text-white">Whitepaper (draft) <span aria-hidden="true">→</span></a>
                         </div>

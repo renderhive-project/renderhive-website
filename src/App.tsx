@@ -5,6 +5,7 @@ import AppRouter from './AppRouter';
 const userTheme = localStorage.getItem('theme');
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+// icons: https://www.flaticon.com/search?author_id=1&style_id=13&type=standard&word=
 
 // theme switcher for light/dark mode
 const themeCheck = () => {

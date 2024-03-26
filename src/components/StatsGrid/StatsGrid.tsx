@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import { useInView } from 'react-intersection-observer';
 
 // icons
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
@@ -17,8 +17,11 @@ interface StatProps {
 
 // Stat component
 const StatsCard: React.FC<StatProps> = ({ title, value, className, unit, tooltip }) => {
-    const [hasPlayed, setHasPlayed] = useState(false);
     const [showTooltip, setShowTooltip] = useState(false);
+
+    const { ref, inView } = useInView({
+        triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+    });
 
     return (
         <div className={`relative group flex flex-col w-full ${className} bg-primary-mid-dark rounded-xl px-2 py-2 items-center `}>
@@ -30,19 +33,13 @@ const StatsCard: React.FC<StatProps> = ({ title, value, className, unit, tooltip
                 />
             </div>
 
-            <div className="flex flex-col w-full h-full space-y-2 px-2 pb-6 justify-center">
+            <div ref={ref} className="flex flex-col w-full h-full space-y-2 px-2 pb-6 justify-center">
                 <div className="text-secondary text-4xl lg:text-4xl">
-                    <VisibilitySensor active={!hasPlayed} onChange={(isVisible: boolean ) => {
-                        if (isVisible && !hasPlayed) setHasPlayed(true);
-                    }}>
-                        {({ isVisible }: { isVisible: boolean }) => (
-                            <CountUp end={isVisible ? value : 0} duration={1.75} separator="," />
-                        )}
-                    </VisibilitySensor>
+                    <CountUp end={inView ? value : 0} duration={1.75} separator="," />
                     <span className="text-lg ml-2">{unit}</span>
                 </div>
                 <div className="text-white text-sm md:text-xs lg:text-sm">
-                    {title}
+                    {title} *
                 </div>
 
                 {showTooltip && tooltip && (
@@ -82,7 +79,9 @@ const StatsGrid: React.FC<StatsGridProps> = ({ children }) => {
         <div className="relative flex flex-col w-full gap-4">
             {children}
 
-            {/* <div className="absolute flex inset-0 opacity-85 bg-primary-dark border border-primary-navy rounded-xl items-center justify-center" /> */}
+            <div className="flex rounded-xl px-2 py-2 items-center justify-center rounded-xl bg-primary-dark text-sm sm:text-sm text-secondary">
+                <i>* Displayed values are random numbers for illustration purposes until the network launches.</i>
+            </div>
 
         </div>
     );

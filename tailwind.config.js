@@ -48,6 +48,8 @@ export default {
 
       // text colors
       'main': '#B0B2B8',
+      'mid': '#26323F',
+      'light': '#8F92A1',
     },
     extend: {
       maxWidth: {
@@ -65,9 +67,23 @@ export default {
         'navbar': '0 10px 100px #47A3D711',
         'timeline': '0 0 10px #ED9C11',
       },
+      spacing: {
+        '28': '7rem',
+        '32': '8rem',
+        '36': '9rem',
+        '40': '10rem',
+        '44': '11rem',
+        '48': '12rem',
+        '52': '12rem',
+        '56': '14rem',
+        '60': '15rem',
+      },
     },
     darkSelector: '.dark',
   },
-  plugins: [],
+  plugins: [
+    // ...
+    require('@tailwindcss/forms'),
+  ],
 }
 
