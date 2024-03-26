@@ -1,19 +1,24 @@
 // images
-import HoneycombPatternSection from "@assets/honeycomb_pattern_sections.svg?react";
-import FilecoinFoundationLogo from "@assets/logo_filecoin_foundation.svg?react";
+// import FilecoinFoundationLogo from "@assets/logo_filecoin_foundation.svg?react";
 
 // icons
+import IconX from "@assets/icons/icon-x.svg?react";
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
+import IconGithub from "@assets/icons/icon-github.svg?react";
+
+// images
+import RenderhiveLogo from "@assets/logo.svg?react";
 
 const Footer = () => {
 
     return (
-        <div id="footer" className="relative flex justify-center">
+        <div id="footer" className="relative flex justify-center z-10">
 
-            <div className="relative flex flex-col max-w-8xl mx-6 items-center mt-36">
+            <div className="relative flex flex-col w-full max-w-8xl mx-6 items-center z-10 mt-36 ">
 
                 {/* <!-- Supporters – Filecoin Foundation --> */}
-                <div className="mx-6 items-center z-10">
-                    <div className="flex flex-col items-center p-12 space-y-4">
+                {/* <div className="mx-6 items-center z-10">
+                    <div className="flex flex-row items-center p-12 space-x-4">
                         <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">
                             Supported By
                         </span>
@@ -21,13 +26,124 @@ const Footer = () => {
                             <FilecoinFoundationLogo className="h-12 w-36 text-white hover:text-secondary-mid"/>
                         </a>
                     </div>
-                </div>
+                </div> */}
 
                 {/* <!-- Footer Content --> */}
-                <div className="w-full border-t border-secondary z-10">
-                    <h2 className="mt-10 text-xl text-white "></h2>
-                    {/* <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The storage capacity and rendering power of the hive is distributed on the computers of all participating Blender users – for a maximum of availability. This is possible by the underlying blockchain technology of Hedera Hashgraph and IPFS / Filecoin.</p> */}
+                <div className="flex flex-col md:flex-row w-full xl:w-[85%] border-b border-b-primary-light py-10 mx-0 xl:mx-20 z-10 space-y-12 md:space-y-0">
+                        
+                    <div className=" flex w-full flex-col space-y-4 items-center justify-center">
+
+                        <a href="#section-hero" className="group flex items-center" >
+                            <RenderhiveLogo className="w-auto text-main group-hover:text-secondary"/>
+                            <span className="text-lg ml-4 leading-6 text-main font-logo tracking-widest group-hover:text-secondary">renderhive</span>
+                        </a>
+                        <span className="text-xs md:text-sm text-main">
+                            – Supported by a <a href="https://fil.org/grants/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary">Filecoin Foundation Grant</a> –
+                        </span>
+
+                    </div>
+                        
                 </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-12 lg:gap-x-8 gap-y-8 w-full xl:w-[85%] border-b border-b-primary-light py-10 mx-0 xl:mx-20 z-10">
+                    
+                    <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
+
+                        <div className="text-white font-bold">
+                            Navigation
+                        </div>
+                        <div className="flex flex-col sm:items-start sm:justify-start text-main ">
+                            <a href="#section-how-it-works" className="hover:text-secondary">
+                                How it Works
+                            </a>
+                            <a href="#section-roadmap" className="hover:text-secondary">
+                                Roadmap
+                            </a>
+                            <a href="#section-features" className="hover:text-secondary">
+                                Features
+                            </a>
+                            <a href="#section-pricing" className="hover:text-secondary">
+                                Pricing
+                            </a>
+                            <a href="#section-faq" className="hover:text-secondary">
+                                FAQ
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
+
+                        <div className="text-white font-bold">
+                            Source Code
+                        </div>
+                        <div className="flex flex-col sm:items-start sm:justify-start text-main ">
+                            <a href="https://github.com/renderhive-project/renderhive-service-app" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Service App
+                            </a>
+                            <a href="https://github.com/renderhive-project/renderhive-smart-contracts" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Smart Contract
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
+
+                        <div className="text-white font-bold">
+                            Technologies
+                        </div>
+                        <div className="flex flex-col sm:items-start sm:justify-start text-main ">
+                            <a href="https://filecoin.io/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Filecoin
+                            </a>
+                            <a href="https://www.ipfs.io/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                IPFS
+                            </a>
+                            <a href="https://www.hedera.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Hedera Hashgraph
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
+
+                        <div className="text-white font-bold">
+                            Transparency
+                        </div>
+                        <div className="flex flex-col sm:items-start sm:justify-start text-main ">
+                            <a href="impressum" className="hover:text-secondary">
+                                Impressum
+                            </a>
+                            <a href="privacy" className="hover:text-secondary">
+                                Privacy Policy
+                            </a>
+                            <a href="terms" className="hover:text-secondary">
+                                Terms of Use
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div className="flex flex-row w-full xl:w-[85%] py-10 mx-0 xl:mx-20 z-10">
+                        
+                    <p className="flex flex-grow text-xs text-main text-left">
+                        Copyright © 2024 Christian Stolze. <br/>
+                        All trademarks and company names are the property of their respective owners.<br/>
+                    </p>
+                    <div className="flex flex-row pl-4 space-x-4 items-center justify-end ">
+                        <a href="" target="_blank" rel="noopener noreferrer" className="w-8 h-8 text-main hover:text-secondary">
+                            <EnvelopeIcon />
+                        </a>
+                        <a href="https://twitter.com/renderhive" target="_blank" rel="noopener noreferrer" className="w-6 h-6 text-main hover:text-secondary">
+                            <IconX />
+                        </a>
+                        <a href="https://github.com/renderhive-project/" target="_blank" rel="noopener noreferrer" className="w-7 h-7 text-main hover:text-secondary">
+                            <IconGithub />
+                        </a>
+                    </div>
+
+                </div>
+                        
 
             </div>
 
@@ -36,10 +152,8 @@ const Footer = () => {
             <div className="absolute w-screen z-0 overflow-hidden">
                 
                 {/* <!-- Background Gradient --> */}
-                <div className="w-screen h-[800px] bg-gradient-to-t from-primary-mid-dark from-[50%] to-primary-dark to-[90%]" aria-hidden="true"> </div>
-
-                {/* <!-- Background Patterns --> */}
-                <HoneycombPatternSection className="absolute -bottom-[300px] -left-[300px] sm:-left-[320px] lg:-left-[235px] xl:left-[0px] 2xl:left-[100px] w-[465px] h-[528px]" aria-hidden="true" />
+                <div className="w-screen h-[250px] bg-gradient-to-t from-primary-mid-dark from-[50%] to-primary-dark to-[90%]" aria-hidden="true"> </div>
+                <div className="w-screen h-[790px] sm:h-[500px] md:h-[380px] bg-primary-mid-dark" aria-hidden="true"> </div>
 
             </div>
 

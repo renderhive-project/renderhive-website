@@ -7,11 +7,11 @@ import Footer from "./components/Footer/Footer";
 
 // Navigation menu items
 const NAVIGATION_MENU_ITEMS = [
-  { href: '#section-about', label: 'How it Works' },
-  { href: '#section-roadmap', label: 'Roadmap' },
-  { href: '#section-benefits', label: 'Benefits' },
-  { href: '#section-pricing', label: 'Pricing' },
-  { href: '#section-faq', label: 'FAQ' },
+  { href: '#section-how-it-works', label: 'How it Works', threshold: 0.15 },
+  { href: '#section-roadmap', label: 'Roadmap', threshold: 0.50 },
+  { href: '#section-features', label: 'Features', threshold: 0.50 },
+  { href: '#section-pricing', label: 'Pricing', threshold: 0.50 },
+  { href: '#section-faq', label: 'FAQ', threshold: 0.15 },
 ];
 
 export default function AppRouter() {

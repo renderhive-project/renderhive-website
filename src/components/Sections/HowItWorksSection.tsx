@@ -22,20 +22,20 @@ const AboutSection = () => {
       }
 
     return (
-        <div id="section-about" className="relative w-screen flex justify-center overflow-hidden pb-96 sm:pb-96">
+        <div className="relative w-screen flex justify-center overflow-hidden pb-96 sm:pb-96">
 
-            <div className="relative flex flex-col max-w-8xl mx-0 p-6 md:p-8 top-[11rem] sm:top-[11rem] md:top-[11rem] lg:top-[20rem] space-y-24 sm:space-y-36 items-center">
+            <div id="section-how-it-works" className="relative flex flex-col w-full h-full max-w-8xl mx-0 p-6 md:p-8 top-[11rem] sm:top-[11rem] md:top-[11rem] lg:top-[20rem] space-y-24 sm:space-y-36 items-center z-10">
 
                 {/* <!-- Section Header: How It Works --> */}
-                <div className="w-[60%] sm:w-[63%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
+                <div className="w-[60%] sm:w-[63%] md:w-[65%] lg:w-[58%] xl:w-[62%] z-10 mb-28">
                     <div className="p-4">
                         <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">How It Works</span>
                     </div>
-                    <h1 className="text-lg leading-10 sm:text-2xl sm:leading-12 md:text-3xl md:leading-12 lg:text-3xl lg:leading-12 xl:text-4xl xl:leading-15 text-white">
+                    <h1 className="text-lg leading-10 sm:text-2xl sm:leading-12 md:text-3xl md:leading-12 lg:text-4xl lg:leading-12 xl:text-5xl xl:leading-15 text-white">
                         A Hive!? So, Where's the Honey?
                     </h1>
-                    <p className="text-md sm:text-base text-main leading-6">
-                        The renderhive works in a similar way like a honey bee hive – hence the name. But instead of collecting pollen to produce honey, our hive inhabitants render the pixels of Blender artworks.
+                    <p className="text-md sm:text-base xl:text-lg text-main leading-6 p-0 m-0 md:px-12">
+                        The renderhive is somewhat comparable to a honey bee hive – hence the name. But instead of collecting pollen to produce honey, our hive inhabitants render the pixels of your Blender artworks.
                     </p>
                 </div>
 
@@ -47,7 +47,7 @@ const AboutSection = () => {
                             The renderhive consists of two different node types
                         </h1>
                         <p className="text-sm sm:text-base leading-6 text-main">
-                            ... that fulfill different tasks in the Renderhive network. Each user can transition between the roles at any time and no node is more important or has more rights than the other. All nodes are treated equally and according to the same rules.
+                            ... that fulfill different tasks in the Renderhive network. Each user can transition between the roles at any time and no node is more important or has more rights than the other. All nodes are treated equally and according to the same rules written in our software code.
                         </p>
                     </div>
                     <div className="space-y-12 lg:w-1/2">
@@ -57,7 +57,7 @@ const AboutSection = () => {
                                 Render Nodes
                             </h2>
                             <p className="text-sm sm:text-base leading-6 text-main">
-                                They are the workers in our hive. They do the render work. Render nodes are Blender users who offer their computer's render power for a self-chosen price to the client nodes. Whenever the node is online, it takes part in the render job distribution and renders frames or parts of a frame.
+                                They are the workers in our hive. They do the render work. Render nodes are Blender users or enthusiasts who offer their computer's render power for a self-chosen price to the client nodes. Whenever the node is online, it takes part in the render job distribution and renders frames or parts of a frame.
                             </p>
                         </div>
 
@@ -138,7 +138,7 @@ const AboutSection = () => {
 
 
                 {/* <!-- Section Subheader: A Hive Without Queen --> */}
-                <div className="w-[80%] sm:w-[80%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
+                <div className="w-[85%] sm:w-[80%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
                     {/* <div className="p-4">
                         <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">Decentralization</span>
                     </div> */}
@@ -190,16 +190,15 @@ const AboutSection = () => {
 
 
                 {/* <!-- Section Subheader: Network Statistics --> */}
-                <div className="relative w-[80%] sm:w-[80%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
+                <div className="relative w-[85%] sm:w-[85%] md:w-[65%] lg:w-[44%] xl:w-[43%] z-10 mb-28">
                     <div className="p-4">
-                        <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">Coming Soon</span>
+                         <span className="rounded-full bg-primary-dark border border-primary-navy px-4 py-2 text-xs sm:text-sm text-primary-navy">Coming Soon</span>
                     </div>
                     <h1 className="text-lg leading-10 sm:leading-12 sm:text-2xl md:text-3xl md:leading-12 lg:text-3xl lg:leading-12 xl:text-4xl xl:leading-15 text-white">
                     Network Statistics
                     </h1>
                     <p className="text-md sm:text-base text-main leading-6">
                     These are some of the real-time numbers of the Renderhive network. The numbers are constantly changing as nodes go on-/offline, render jobs are submitted or finalized, payments are made, etc. 
-                    <br/><span className="text-secondary">Please note that the hive is <b>not</b> launched yet and numbers are only for illustration.</span>
                     </p>
                 </div>
 
@@ -209,15 +208,15 @@ const AboutSection = () => {
 
                         <StatsGrid>
                             <StatsRow classNames="grid-cols-2 lg:grid-cols-6">
-                                <StatsCard title="Total Render Power" value={getRandomInt(10000, 10000000)} className="col-span-2" unit="BBP" tooltip="The cumulative Blender benchmark scores of all active render nodes." />
-                                <StatsCard title="Active Render Nodes" value={getRandomInt(3, 5000)} className="col-span-1" tooltip="A node is considered active, if it offered it's render power in this hive cycle or is currently busy rendering."/>
-                                <StatsCard title="Active Render Jobs" value={getRandomInt(1, 500)} className="col-span-1" tooltip="The number of render jobs, which are currently rendered or waiting to be rendered."/>
-                                <StatsCard title="Remaining frames" value={getRandomInt(1, 100000)} className="col-span-2" tooltip="The number of frames in all currently active render jobs that still need to be rendered."/>
+                            <StatsCard title="Current Hive Cycle" value={getRandomInt(1, 999999)} className="col-span-2" tooltip="The render hive distributes render jobs in rounds – these rounds are called hive cycles. Each hive cycle lasts 5 min." />
+                                <StatsCard title="Render Nodes" value={getRandomInt(3, 5000)} className="col-span-1" tooltip="Number of render nodes that offered their render power in this hive cycle or are currently busy rendering."/>
+                                <StatsCard title="Render Jobs" value={getRandomInt(1, 500)} className="col-span-1" tooltip="The number of render jobs, which are currently rendered or waiting to be rendered."/>
+                                <StatsCard title="Remaining Frames" value={getRandomInt(1, 100000)} className="col-span-2" tooltip="The number of frames in all currently active render jobs that still need to be rendered."/>
                             </StatsRow>
                             <StatsRow classNames="grid-cols-2 lg:grid-cols-7">
-                                <StatsCard title="Current Hive Cycle" value={getRandomInt(1, 999999)} className="col-span-2" tooltip="The render hive distributes render jobs in rounds – these rounds are called hive cycles. Each hive cycle lasts 5 min." />
+                            <StatsCard title="Total Render Power" value={getRandomInt(10000, 10000000)} className="col-span-2" unit="BBP" tooltip="The cumulative Blender benchmark points (BBP) of all currently active render nodes in the hive." />
                                 <StatsCard title="Total Earnings" value={getRandomInt(1000000, 10000000)} unit="USD" className="col-span-2 lg:col-span-3" tooltip="The total earnings of all render nodes since the hive went online (in United States Dollar)."/>
-                                <StatsCard title="Total Value Locked" value={getRandomInt(10*5, 500*5 + 10000)} unit="USD" className="col-span-2 lg:col-span-2" tooltip="The total value currently locked in the Renderhive smart contract for staking and render job escrows (in United States Dollar)."/>
+                                <StatsCard title="Total Frames" value={getRandomInt(100000, 100000000)} className="col-span-2 lg:col-span-2" tooltip="The total number of frames ever rendered on the Renderhive network."/>
                             </StatsRow>
                         </StatsGrid>
 
@@ -245,8 +244,8 @@ const AboutSection = () => {
                 <div className=" w-screen h-[400px] top-[1080px] bg-gradient-to-t from-primary-dark to-primary-mid-dark" aria-hidden="true"> </div>
 
                 {/* <!-- Background Patterns --> */}
-                <HoneycombPatternSection className="absolute -top-[0px] -left-[400px] sm:-top-[0px] sm:-left-[320px] lg:-top-[0px] lg:-left-[235px] xl:-left-[185px] 2xl:left-[0px] w-[465px] h-[528px]" aria-hidden="true" />
-                <HoneycombPatternSection className="absolute top-[268px] -right-[400px] sm:top-[268px] sm:-right-[320px] lg:top-[268px] lg:-right-[235px] xl:-right-[185px] 2xl:right-[0px] w-[465px] h-[528px]" aria-hidden="true" />
+                <HoneycombPatternSection className="absolute -top-[0px] -left-[400px] sm:-top-[0px] sm:-left-[320px] lg:-top-[0px] lg:-left-[235px] xl:-left-[185px] w-[465px] h-[528px]" aria-hidden="true" />
+                <HoneycombPatternSection className="absolute top-[268px] -right-[400px] sm:top-[268px] sm:-right-[320px] lg:top-[268px] lg:-right-[235px] xl:-right-[185px] w-[465px] h-[528px]" aria-hidden="true" />
 
             </div>
 
