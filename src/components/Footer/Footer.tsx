@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 // images
 // import FilecoinFoundationLogo from "@assets/logo_filecoin_foundation.svg?react";
 
@@ -33,10 +35,10 @@ const Footer = () => {
                         
                     <div className=" flex w-full flex-col space-y-4 items-center justify-center">
 
-                        <a href="#section-hero" className="group flex items-center" >
+                        <Link to="" className="group flex items-center" >
                             <RenderhiveLogo className="w-auto text-main group-hover:text-secondary"/>
                             <span className="text-lg ml-4 leading-6 text-main font-logo tracking-widest group-hover:text-secondary">renderhive</span>
-                        </a>
+                        </Link>
                         <span className="text-xs md:text-sm text-main">
                             – Supported by a <a href="https://fil.org/grants/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary">Filecoin Foundation Grant</a> –
                         </span>
@@ -46,50 +48,74 @@ const Footer = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-12 lg:gap-x-8 gap-y-8 w-full xl:w-[85%] border-b border-b-primary-light py-10 mx-0 xl:mx-20 z-10">
-                    
+
                     <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
 
                         <div className="text-white font-bold">
-                            Navigation
+                            Overview
                         </div>
                         <div className="flex flex-col sm:items-start sm:justify-start text-main ">
-                            <a href="#section-how-it-works" className="hover:text-secondary">
+                            <Link to="/#section-how-it-works" className="hover:text-secondary">
                                 How it Works
-                            </a>
-                            <a href="#section-roadmap" className="hover:text-secondary">
+                            </Link>
+                            <Link to="/#section-roadmap" className="hover:text-secondary">
                                 Roadmap
-                            </a>
-                            <a href="#section-features" className="hover:text-secondary">
+                            </Link>
+                            <Link to="/#section-features" className="hover:text-secondary">
                                 Features
-                            </a>
-                            <a href="#section-pricing" className="hover:text-secondary">
+                            </Link>
+                            <Link to="/#section-pricing" className="hover:text-secondary">
                                 Pricing
-                            </a>
-                            <a href="#section-faq" className="hover:text-secondary">
+                            </Link>
+                            <Link to="/#section-faq" className="hover:text-secondary">
                                 FAQ
-                            </a>
+                            </Link>
                         </div>
 
                     </div>
                     <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
 
                         <div className="text-white font-bold">
-                            Source Code
+                            Software
                         </div>
                         <div className="flex flex-col sm:items-start sm:justify-start text-main ">
-                            <a href="https://github.com/renderhive-project/renderhive-service-app" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
-                                Service App
+                            <a href="https://github.com/renderhive-project/renderhive-service-app/releases" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Download
                             </a>
-                            <a href="https://github.com/renderhive-project/renderhive-smart-contracts" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
-                                Smart Contract
+                            <a href="https://github.com/renderhive-project/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Source Code
                             </a>
+                            <Link to="" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Requirements
+                            </Link>
+                            <Link to="" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                                Changelog
+                            </Link>
                         </div>
 
                     </div>
                     <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
 
                         <div className="text-white font-bold">
-                            Technologies
+                            About
+                        </div>
+                        <div className="flex flex-col sm:items-start sm:justify-start text-main ">
+                            <Link to="about/impressum" className="hover:text-secondary">
+                                Legal Notice
+                            </Link>
+                            <Link to="about/privacy" className="hover:text-secondary">
+                                Privacy Policy
+                            </Link>
+                            <Link to="about/license" className="hover:text-secondary">
+                                License
+                            </Link>
+                        </div>
+
+                    </div>
+                    <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
+
+                        <div className="text-white font-bold">
+                            External Services
                         </div>
                         <div className="flex flex-col sm:items-start sm:justify-start text-main ">
                             <a href="https://filecoin.io/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
@@ -100,24 +126,6 @@ const Footer = () => {
                             </a>
                             <a href="https://www.hedera.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
                                 Hedera Hashgraph
-                            </a>
-                        </div>
-
-                    </div>
-                    <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
-
-                        <div className="text-white font-bold">
-                            Transparency
-                        </div>
-                        <div className="flex flex-col sm:items-start sm:justify-start text-main ">
-                            <a href="impressum" className="hover:text-secondary">
-                                Impressum
-                            </a>
-                            <a href="privacy" className="hover:text-secondary">
-                                Privacy Policy
-                            </a>
-                            <a href="terms" className="hover:text-secondary">
-                                Terms of Use
                             </a>
                         </div>
 
