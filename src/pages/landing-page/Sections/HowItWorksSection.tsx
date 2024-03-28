@@ -1,5 +1,5 @@
 // components
-import { StatsGrid, StatsRow, StatsCard } from "../StatsGrid/StatsGrid";
+import { StatsGrid, StatsRow, StatsCard } from "../../../components/StatsGrid/StatsGrid";
 
 // images
 import HoneycombPatternSection from "@assets/honeycomb_pattern_sections.svg?react";
