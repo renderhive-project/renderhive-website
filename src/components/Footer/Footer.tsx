@@ -161,7 +161,7 @@ const Footer = () => {
                 
                 {/* <!-- Background Gradient --> */}
                 <div className="w-screen h-[250px] bg-gradient-to-t from-primary-mid-dark from-[50%] to-primary-dark to-[90%]" aria-hidden="true"> </div>
-                <div className="w-screen h-[790px] sm:h-[500px] md:h-[380px] bg-primary-mid-dark" aria-hidden="true"> </div>
+                <div className="w-screen h-[830px] sm:h-[500px] md:h-[380px] bg-primary-mid-dark" aria-hidden="true"> </div>
 
             </div>
 

@@ -101,6 +101,18 @@ export default function AppRouter() {
           path: "",
           element: <LandingPage />,
         },
+        {
+          path: "about/impressum",
+          element: <ImpressumPage />,
+        },
+        {
+          path: "about/privacy",
+          element: <PrivacyPolicyPage />,
+        },
+        {
+          path: "about/license",
+          element: <LicensePage />,
+        },
         // {
         //   path: "/newpage",
         //   element: ((boolean expression) ? <Page1 /> : <Navigate to="/page2" replace />),

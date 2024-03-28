@@ -1,7 +1,7 @@
 // components
-import { Timeline, Milestone } from "../Timeline/Timeline";
-import { RenderPrices } from "../RenderPrices/RenderPrices";
-import { Tabs, TabItem } from "../Tabs/Tabs";
+import { Timeline, Milestone } from "../../../components/Timeline/Timeline";
+import { RenderPrices } from "../../../components/RenderPrices/RenderPrices";
+import { Tabs, TabItem } from "../../../components/Tabs/Tabs";
 
 // images
 import HoneycombPatternSection from "@assets/honeycomb_pattern_sections.svg?react";
