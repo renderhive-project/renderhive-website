@@ -1,28 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 type TabItemProps = {
     name: string;
     children: React.ReactNode;
+    id?: string;
 };
 
 type TabsProps = {
     children: React.ReactElement<TabItemProps>[];
-    classNames?: string;
+    className?: string;
 };
 
-const TabItem: React.FC<TabItemProps> = ({ children }) => {
-    return <div>{children}</div>;
+const TabItem: React.FC<TabItemProps> = ({ children, id }) => {
+    return (
+        <div id={id} className="flex flex-col w-full">
+            {children}
+        </div>
+    );
 };
 
-const Tabs: React.FC<TabsProps> = ({ children, classNames }) => {
+const Tabs: React.FC<TabsProps> = ({ children, className }) => {
+    const location = useLocation();
     const [activeTab, setActiveTab] = useState(children[0].props.name);
 
     const classNamesFunc = (...classes: (false | null | undefined | string)[]) => {
         return classes.filter(Boolean).join(' ');
     };
 
+    // Listen for hash changes
+    useEffect(() => {
+
+        // calculate the navbar height
+        const hash = location.hash.slice(1);
+        const childWithHash = children.find(child => child.props.id === hash);
+        if (childWithHash) {
+            setActiveTab(childWithHash.props.name);
+
+            // Scroll to the position of the tab after the DOM updates
+            setTimeout(() => {
+                const navbarHeight = document.querySelector('header')?.offsetHeight || 0;
+                const element = document.getElementById(hash)?.parentElement;
+                if (element) {
+                    const elementPosition = element.getBoundingClientRect().top + window.scrollY
+                    window.scrollTo({
+                        top: elementPosition - navbarHeight,
+                        behavior: 'auto'
+                    })
+                }
+            }, 100);
+        }
+
+    }, [location]);
+
     return (
-        <div className={`flex flex-col space-y-0 lg:space-y-4 items-center w-full h-full lg:overflow-hidden ${classNames}`}>
+        <div className={`flex flex-col space-y-0 lg:space-y-4 items-center w-full h-full lg:overflow-hidden ${className}`}>
             <div className="w-full px-8 md:hidden">
                 <label htmlFor="tabs" className="sr-only">
                     Select a tab
