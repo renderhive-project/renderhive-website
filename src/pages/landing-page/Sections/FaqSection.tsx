@@ -126,8 +126,8 @@ const FaqSection = () => {
 
                 {/* <!-- Background Patterns --> */}
                 <div className=" w-screen h-[800px] top-[0px] " aria-hidden="true">
-                    <HoneycombPatternSection className="absolute -top-[0px] -left-[400px] sm:-top-[0px] sm:-left-[320px] lg:-top-[0px] lg:-left-[235px] xl:-left-[185px] w-[465px] h-[528px]" aria-hidden="true" />
-                    <HoneycombPatternSection className="absolute top-[268px] -right-[400px] sm:top-[268px] sm:-right-[320px] lg:top-[268px] lg:-right-[235px] xl:-right-[185px] w-[465px] h-[528px]" aria-hidden="true" />
+                    <HoneycombPatternSection className="absolute -top-[0px] -left-[400px] sm:-top-[0px] sm:-left-[320px] lg:-top-[0px] lg:-left-[235px] xl:-left-[185px] w-[465px] h-[528px] text-secondary" aria-hidden="true" />
+                    <HoneycombPatternSection className="absolute top-[268px] -right-[400px] sm:top-[268px] sm:-right-[320px] lg:top-[268px] lg:-right-[235px] xl:-right-[185px] w-[465px] h-[528px] text-secondary" aria-hidden="true" />
                 </div>
 
             </div>
