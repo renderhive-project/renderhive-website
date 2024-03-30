@@ -3,9 +3,9 @@ import HoneycombPatternLight from "@assets/honeycomb_pattern_light.svg?react";
 import AppScreenshot from "@assets/hero_app_screenshot.png";
 
 // icons
-import IconCoin from "@assets/icons/icon-coin.svg?react";
-import IconDecentralized from "@assets/icons/icon-decentralized.svg?react";
-import IconGithub from "@assets/icons/icon-github.svg?react";
+// import IconCoin from "@assets/icons/icon-coin.svg?react";
+// import IconDecentralized from "@assets/icons/icon-decentralized.svg?react";
+// import IconGithub from "@assets/icons/icon-github.svg?react";
 
 const HeroSection = () => {
 

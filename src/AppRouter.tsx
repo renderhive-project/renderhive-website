@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 
@@ -24,19 +24,6 @@ export default function AppRouter() {
   ];
 
   const Layout = () => {
-    const [navbarHeight, setNavbarHeight] = useState(0);
-
-    // get the height of the navbar
-    useEffect(() => {
-
-        // calculate the navbar height
-        const navbarHeight = document.querySelector('header')?.offsetHeight || 0;
-
-        const navbar = document.querySelector('header');
-        if (navbar) {
-            setNavbarHeight(navbarHeight);
-        }
-    }, []);
 
     /* <CODE TO HANDLE ANCHOR LINKS >
        Source: https://dev.to/mindactuate/scroll-to-anchor-element-with-react-router-v6-38op
