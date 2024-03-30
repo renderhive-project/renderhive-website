@@ -1,10 +1,10 @@
 import "./landing-page.scss"
 
 // import sections
-import HeroSection from "./Sections/HeroSection"
-import AboutSection from "./Sections/HowItWorksSection"
-import RoadmapSoftwareSection from "./Sections/RoadmapSoftwareSection"
-import FaqSection from "./Sections/FaqSection"
+import HeroSection from "./sections/HeroSection"
+import AboutSection from "./sections/HowItWorksSection"
+import RoadmapSoftwareSection from "./sections/RoadmapSoftwareSection"
+import FaqSection from "./sections/FaqSection"
 
 const LandingPage = () => {
 

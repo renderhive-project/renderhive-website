@@ -100,14 +100,14 @@ const Footer = () => {
                             About
                         </div>
                         <div className="flex flex-col sm:items-start sm:justify-start text-main ">
-                            <Link to="about/impressum" className="hover:text-secondary">
+                            <Link to="about#section-legal-notice" className="hover:text-secondary">
                                 Legal Notice
                             </Link>
-                            <Link to="about/privacy" className="hover:text-secondary">
-                                Privacy Policy
+                            <Link to="about#section-terms-of-service" className="hover:text-secondary">
+                                Terms of Service
                             </Link>
-                            <Link to="about/license" className="hover:text-secondary">
-                                License
+                            <Link to="about#section-privacy-policy" className="hover:text-secondary">
+                                Privacy Policy
                             </Link>
                         </div>
 
@@ -115,7 +115,7 @@ const Footer = () => {
                     <div className="flex flex-col space-y-4 sm:items-start sm:justify-start text-sm">
 
                         <div className="text-white font-bold">
-                            External Services
+                            Technologies
                         </div>
                         <div className="flex flex-col sm:items-start sm:justify-start text-main ">
                             <a href="https://filecoin.io/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
@@ -132,13 +132,13 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-row w-full xl:w-[85%] py-10 mx-0 xl:mx-20 z-10">
+                <div className="flex flex-col-reverse sm:flex-row w-full xl:w-[85%] py-10 mx-0 xl:mx-20 z-10 justify-center items-center sm:justify-start sm:items-start">
                         
-                    <p className="flex flex-grow text-xs text-main text-left">
-                        Copyright © 2024 Christian Stolze. <br/>
+                    <div className="flex sm:flex-grow text-xs text-main text-center sm:text-left">
+                        Copyright © 2024 Renderhive Project, Christian Stolze. <br/>
                         All trademarks and company names are the property of their respective owners.<br/>
-                    </p>
-                    <div className="flex flex-row pl-4 space-x-4 items-center justify-end ">
+                    </div>
+                    <div className="flex flex-row space-x-4 items-center justify-center sm:justify-end mb-8 sm:mb-0 sm:pl-4">
                         <a href="" target="_blank" rel="noopener noreferrer" className="w-8 h-8 text-main hover:text-secondary">
                             <EnvelopeIcon />
                         </a>
@@ -160,8 +160,8 @@ const Footer = () => {
             <div className="absolute w-screen z-0 overflow-hidden">
                 
                 {/* <!-- Background Gradient --> */}
-                <div className="w-screen h-[250px] bg-gradient-to-t from-primary-mid-dark from-[50%] to-primary-dark to-[90%]" aria-hidden="true"> </div>
-                <div className="w-screen h-[830px] sm:h-[500px] md:h-[380px] bg-primary-mid-dark" aria-hidden="true"> </div>
+                <div className="w-screen h-[250px] bg-gradient-to-t from-primary-mid-dark from-[0%] to-primary-dark to-[100%]" aria-hidden="true"> </div>
+                <div className="w-screen h-[850px] sm:h-[500px] md:h-[380px] bg-primary-mid-dark" aria-hidden="true"> </div>
 
             </div>
 
