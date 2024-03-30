@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 
 // import sections
-// import HeroSection from "../landing-page/Sections/HeroSection"
+import ContentSection from "./sections/ContentSection"
 
-const PrivacyPolicyPage = () => {
-  
+const AboutPage = () => {
+
   // make sure to scroll to top when page loads
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,13 +13,10 @@ const PrivacyPolicyPage = () => {
   return (
     <main className="flex flex-col w-full items-center">
 
-      {/* <HeroSection/>
-      <AboutSection/>
-      <RoadmapSoftwareSection/>
-      <FaqSection/> */}
+      <ContentSection />
 
     </main>
   )
 }
 
-export default PrivacyPolicyPage;
+export default AboutPage;

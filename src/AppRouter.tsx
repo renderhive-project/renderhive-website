@@ -5,10 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 // Pages
 import LandingPage from "./pages/landing-page/LandingPage";
-
-import ImpressumPage from "./pages/about/ImpressumPage";
-import PrivacyPolicyPage from "./pages/about/PrivacyPolicyPage";
-import LicensePage from "./pages/about/LicensePage";
+import AboutPage from "./pages/about/AboutPage";
 
 // components
 import NavBar from "./components/NavBar/NavBar";
@@ -23,11 +20,11 @@ export default function AppRouter() {
     { href: '/#section-features', label: 'Features', threshold: 0.50 },
     { href: '/#section-pricing', label: 'Pricing', threshold: 0.50 },
     { href: '/#section-faq', label: 'FAQ', threshold: 0.15 },
+    { href: '/about', label: 'About', threshold: 0.15 },
   ];
 
   const Layout = () => {
     const [navbarHeight, setNavbarHeight] = useState(0);
-
 
     // get the height of the navbar
     useEffect(() => {
@@ -45,33 +42,32 @@ export default function AppRouter() {
        Source: https://dev.to/mindactuate/scroll-to-anchor-element-with-react-router-v6-38op
        Slightly modified to work with the navbar height
     */
-        const location = useLocation();
-        const lastHash = useRef('');
-      
-        // listen to location change using useEffect with location as dependency
-        // https://jasonwatmore.com/react-router-v6-listen-to-location-route-change-without-history-listen
-        useEffect(() => {
-          if (location.hash) {
-            lastHash.current = location.hash.slice(1); // safe hash for further use after navigation
+    const location = useLocation();
+    const lastHash = useRef('');
+  
+    // listen to location change using useEffect with location as dependency
+    // https://jasonwatmore.com/react-router-v6-listen-to-location-route-change-without-history-listen
+    useEffect(() => {
+      lastHash.current = location.hash.slice(1);
+
+      if (lastHash.current && document.getElementById(lastHash.current)) {
+        setTimeout(() => {
+          //  s
+          const navbarHeight = document.querySelector('header')?.offsetHeight || 0;
+          const element = document.getElementById(lastHash.current)
+          if (element) {
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY
+            window.scrollTo({
+              top: elementPosition - navbarHeight,
+              behavior: 'smooth'
+            })
           }
-      
-          if (lastHash.current && document.getElementById(lastHash.current)) {
-            setTimeout(() => {
-              //  s
-              const element = document.getElementById(lastHash.current)
-              if (element) {
-                const elementPosition = element.getBoundingClientRect().top + window.scrollY
-                window.scrollTo({
-                  top: elementPosition - navbarHeight,
-                  behavior: 'smooth'
-                })
-              }
-              // s
-            }, 100)
-          } else {
-            window.scrollTo(0, 0);
-          }
-        }, [location]);
+          // s
+        }, 100)
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }, [location]);
     /* </CODE TO HANDLE ANCHOR LINKS > */
 
     return (
@@ -102,16 +98,8 @@ export default function AppRouter() {
           element: <LandingPage />,
         },
         {
-          path: "about/impressum",
-          element: <ImpressumPage />,
-        },
-        {
-          path: "about/privacy",
-          element: <PrivacyPolicyPage />,
-        },
-        {
-          path: "about/license",
-          element: <LicensePage />,
+          path: "about",
+          element: <AboutPage />,
         },
         // {
         //   path: "/newpage",
