@@ -246,7 +246,7 @@ const RoadmapSoftwareSection = () => {
                                 </p>
                             </div>
 
-                            <Tabs classNames="...">
+                            <Tabs>
                                 <TabItem name="Render Offers">
                                     <div className="flex flex-col lg:flex-row w-full h-full space-y-8 lg:space-y-0 lg:space-x-12 p-8">
                                         <div className="flex w-full lg:w-1/2 space-y-4 lg:space-y-4 text-left">
@@ -343,8 +343,8 @@ const RoadmapSoftwareSection = () => {
                 <div className="w-screen h-[300px] top-[1100px] lg:top-[700px] bg-gradient-to-t from-primary-dark to-primary-mid-dark"aria-hidden="true"> </div>
 
                 {/* <!-- Background Patterns --> */}
-                <HoneycombPatternSection className="absolute top-[268px] -left-[400px] sm:top-[268px] sm:-left-[320px] lg:top-[268px] lg:-left-[235px] xl:-left-[185px] w-[465px] h-[528px]"aria-hidden="true"/>
-                <HoneycombPatternSection className="absolute -top-[0px] -right-[400px] sm:-top-[0px] sm:-right-[320px] lg:-top-[0px] lg:-right-[235px] xl:-right-[185px] w-[465px] h-[528px]"aria-hidden="true"/>
+                <HoneycombPatternSection className="absolute top-[268px] -left-[400px] sm:top-[268px] sm:-left-[320px] lg:top-[268px] lg:-left-[235px] xl:-left-[185px] w-[465px] h-[528px] text-secondary" aria-hidden="true"/>
+                <HoneycombPatternSection className="absolute -top-[0px] -right-[400px] sm:-top-[0px] sm:-right-[320px] lg:-top-[0px] lg:-right-[235px] xl:-right-[185px] w-[465px] h-[528px] text-secondary" aria-hidden="true"/>
 
             </div>
 

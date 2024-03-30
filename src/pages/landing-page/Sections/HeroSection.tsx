@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div id="section-hero" className="relative flex flex-col w-full mb-20 overflow-hidden items-center">
 
             {/* <!-- Background pattern and glow --> */}
-            <HoneycombPatternLight className="absolute -top-[606px] -left-[805px] sm:-top-[500px] sm:-left-[790px] lg:-top-[125px] lg:-left-[558px] w-[1188px] h-[1030px] " aria-hidden="true" />
+            <HoneycombPatternLight className="absolute -top-[606px] -left-[805px] sm:-top-[500px] sm:-left-[790px] lg:-top-[125px] lg:-left-[558px] w-[1188px] h-[1030px] text-white text-opacity-5" aria-hidden="true" />
             <div className="absolute rounded-[100%] top-[28rem] sm:top-[32rem] lg:top-[8rem] left-[5%] sm:left-[15%] lg:left-[55%] w-[700px] h-[700px] transform-gpu blur-[150px] bg-blue-glow opacity-20" aria-hidden="true"></div>
 
             {/* <!-- Hero section --> */}
