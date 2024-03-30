@@ -165,8 +165,8 @@ const RoadmapSoftwareSection = () => {
                                         <IconFeaturesRewards />
                                     </div>
                                     <div className="flex flex-col space-y-2">
-                                        <h2 className="text-md text-white ">Earn Rewards</h2>
-                                        <p className="text-xs text-main">By offering the render power of your computer to others you can earn rewards for each render job your node participates in.</p>
+                                        <h3 className="text-md text-white ">Earn Rewards</h3>
+                                        <p className="text-xs md:text-sm text-main">By offering the render power of your computer to others you can earn rewards for each render job your node participates in.</p>
                                     </div>
                                 </div>
                                 
@@ -176,8 +176,8 @@ const RoadmapSoftwareSection = () => {
                                         <IconFeaturesRendering />
                                     </div>
                                     <div className="flex flex-col space-y-2">
-                                        <h2 className="text-md text-white ">Render Projects</h2>
-                                        <p className="text-xs text-main">As on a conventional render farm you can upload your Blender projects and use the networks joined render power to get your render results faster.</p>
+                                        <h3 className="text-md text-white ">Render Projects</h3>
+                                        <p className="text-xs md:text-sm text-main">As on a conventional render farm you can upload your Blender projects and use the networks joined render power to get your render results faster.</p>
                                     </div>
                                 </div>
                                 
@@ -187,8 +187,8 @@ const RoadmapSoftwareSection = () => {
                                         <IconFeaturesOnchain />
                                     </div>
                                     <div className="flex flex-col space-y-2">
-                                        <h2 className="text-md text-white ">On-chain</h2>
-                                        <p className="text-xs text-main">The network operates on blockchain technologies, which enables a fair and transparent render job distribution as well as instant and secure payments.</p>
+                                        <h3 className="text-md text-white ">On-chain</h3>
+                                        <p className="text-xs md:text-sm text-main">The network operates on blockchain technologies, which enables a fair and transparent render job distribution as well as instant and secure payments.</p>
                                     </div>
                                 </div>
                                 
@@ -198,8 +198,8 @@ const RoadmapSoftwareSection = () => {
                                         <IconFeaturesOpensource />
                                     </div>
                                     <div className="flex flex-col space-y-2">
-                                        <h2 className="text-md text-white ">Open Source</h2>
-                                        <p className="text-xs text-main">Like Blender, the Renderhive network and all its software components are open source. This enables anyone to use the software, to verify the code, and to contribute features as well as bug fixes.</p>
+                                        <h3 className="text-md text-white ">Open Source</h3>
+                                        <p className="text-xs md:text-sm text-main">Like Blender, the Renderhive network and all its software components are open source. This enables anyone to use the software, to verify the code, and to contribute features as well as bug fixes.</p>
                                     </div>
                                 </div>
 
