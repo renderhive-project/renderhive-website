@@ -31,3 +31,101 @@ h3 {
 h4 {
     @apply text-sm md:text-base text-white;
 }
+
+/* Inter */
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter/Inter.ttf') format('truetype');
+    font-weight: 400 ;
+    font-style: normal italic;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter/Inter.ttf') format('truetype');
+    font-weight: 600 ;
+    font-style: normal italic;
+}
+
+/* Montserrat */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/Montserrat.ttf') format('truetype');
+    font-weight: 200;
+    font-style: 'normal';
+}
+
+/* div fading effects */
+@layer utilities {
+
+    div.fade-out-top {
+        --mask: linear-gradient(to top, 
+            rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+            rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+        ) 100% 50% / 100% 100% repeat-x;
+        -webkit-mask: var(--mask); 
+        mask: var(--mask);
+    }
+
+    div.fade-out-bottom {
+        --mask: linear-gradient(to bottom, 
+            rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+            rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+        ) 100% 50% / 100% 100% repeat-x;
+        -webkit-mask: var(--mask); 
+        mask: var(--mask);
+        
+    }
+
+    div.fade-out-left {
+    --mask: linear-gradient(to left, 
+        rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+        rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+    ) 100% 50% / 100% 100% repeat-x;
+    -webkit-mask: var(--mask); 
+    mask: var(--mask);
+    }
+
+    div.fade-out-top-bottom {
+        --mask: linear-gradient(to top, 
+            rgba(0,0,0, 0) 0,   rgba(0,0,0, 1) 15%, 
+            rgba(0,0,0, 1) 50%, rgba(0,0,0, 0) 100%
+        ) 100% 50% / 100% 100% repeat-x;
+        -webkit-mask: var(--mask); 
+        mask: var(--mask);
+    }
+
+    div.fade-out-left-bottom {
+        --mask-bottom:linear-gradient(to bottom, 
+            rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+            rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+        ) 100% 50% / 100% 100% repeat-x;
+        --mask-left: linear-gradient(to left, 
+            rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+            rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+        ) 100% 50% / 100% 100% repeat-x;
+        -webkit-mask: var(--mask-bottom), var(--mask-left); 
+        mask: var(--mask-bottom), var(--mask-left);
+        -webkit-mask-composite: source-over;
+        mask-composite: intersect;
+    }
+
+    div.fade-out-top-left-bottom {
+        --mask-top: linear-gradient(to top, 
+            rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+            rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+        ) 100% 50% / 100% 100% repeat-x;
+        --mask-left: linear-gradient(to left, 
+            rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+            rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+        ) 100% 50% / 100% 100% repeat-x;
+        --mask-bottom:linear-gradient(to bottom, 
+            rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 80%, 
+            rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+        ) 100% 50% / 100% 100% repeat-x;
+        -webkit-mask: var(--mask-top), var(--mask-left), var(--mask-bottom); 
+        mask: var(--mask-top), var(--mask-left), var(--mask-bottom);
+        -webkit-mask-composite: source-over;
+        mask-composite: intersect;
+    }
+
+}

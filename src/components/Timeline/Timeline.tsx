@@ -14,9 +14,11 @@ const Milestone:  React.FC<MilestoneProps> = ({name, date, description, done, ac
 
     return (
         <>
-            <div className={`absolute flex h-8 w-8 rounded-full top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 items-center justify-center `} onMouseEnter={() => setShowDescription(true)} onMouseLeave={() => setShowDescription(false)}>
-                {(done || active) ? (
-                    <div className={`flex ${active ? 'h-6 w-6' : 'h-5 w-5'} border border-4 border-white items-center justify-center rounded-full bg-secondary ${active && 'shadow-timeline shadow-secondary'}`} />
+            <div className={`absolute flex h-8 w-8 rounded-full top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 items-center justify-center hover:cursor-pointer`} onMouseEnter={() => setShowDescription(true)} onMouseLeave={() => setShowDescription(false)}>
+                { active ? (
+                    <div className={`flex ${active ? 'h-6 w-6' : 'h-5 w-5'} border border-4 border-white items-center justify-center rounded-full bg-secondary-dark ${active && 'shadow-timeline shadow-secondary-mid'}`} />
+                ) : done ? (
+                    <div className={`flex ${active ? 'h-6 w-6' : 'h-5 w-5'} border border-4 border-white items-center justify-center rounded-full bg-secondary`} />
                 ) : (
                     <div className={`flex ${active ? 'h-6 w-6' : 'h-5 w-5'} border border-4 border-white items-center justify-center rounded-full bg-primary-main`} />
                 )}

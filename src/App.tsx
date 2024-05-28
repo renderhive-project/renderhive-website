@@ -28,14 +28,15 @@ const themeCheck = () => {
 //   return;
 // }
 
-
 function App() {
 
   // check theme on load
   themeCheck();
 
   return (
-    <AppRouter />
+    <>
+      <AppRouter />
+    </>
   )
 }
 

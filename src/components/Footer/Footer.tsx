@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+// contexts
+import { useContactForm } from '../../contexts/ContactFormContext/ContactFormContext';
+
 // images
 // import FilecoinFoundationLogo from "@assets/logo_filecoin_foundation.svg?react";
 
@@ -12,6 +15,7 @@ import IconGithub from "@assets/icons/icon-github.svg?react";
 import RenderhiveLogo from "@assets/logo.svg?react";
 
 const Footer = () => {
+    const { setShowContactForm } = useContactForm();
 
     return (
         <div id="footer" className="relative flex justify-center z-10">
@@ -55,8 +59,8 @@ const Footer = () => {
                             Overview
                         </div>
                         <div className="flex flex-col sm:items-start sm:justify-start text-main ">
-                            <Link to="/#section-how-it-works" className="hover:text-secondary">
-                                How it Works
+                            <Link to="/#section-technologies" className="hover:text-secondary">
+                                Technologies
                             </Link>
                             <Link to="/#section-roadmap" className="hover:text-secondary">
                                 Roadmap
@@ -85,12 +89,16 @@ const Footer = () => {
                             <a href="https://github.com/renderhive-project/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
                                 Source Code
                             </a>
-                            <Link to="" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                            {/* <Link to="" target="_blank" rel="noopener noreferrer" className="hover:text-secondary"> */}
+                            <p className="opacity-50">
                                 Requirements
-                            </Link>
-                            <Link to="" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+                            </p>
+                            {/* </Link> */}
+                            {/* <Link to="" target="_blank" rel="noopener noreferrer" className="hover:text-secondary"> */}
+                            <p className="opacity-50">
                                 Changelog
-                            </Link>
+                            </p>
+                            {/* </Link> */}
                         </div>
 
                     </div>
@@ -125,7 +133,7 @@ const Footer = () => {
                                 IPFS
                             </a>
                             <a href="https://www.hedera.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
-                                Hedera Hashgraph
+                                Hedera™ Hashgraph
                             </a>
                         </div>
 
@@ -139,10 +147,10 @@ const Footer = () => {
                         All trademarks and company names are the property of their respective owners.<br/>
                     </div>
                     <div className="flex flex-row space-x-4 items-center justify-center sm:justify-end mb-8 sm:mb-0 sm:pl-4">
-                        <a href="" target="_blank" rel="noopener noreferrer" className="w-8 h-8 text-main hover:text-secondary">
+                        <a onClick={() => setShowContactForm(true)} className="w-8 h-8 text-main hover:text-secondary hover:cursor-pointer">
                             <EnvelopeIcon />
                         </a>
-                        <a href="https://twitter.com/renderhive" target="_blank" rel="noopener noreferrer" className="w-6 h-6 text-main hover:text-secondary">
+                        <a href="https://twitter.com/renderhive" target="_blank" rel="noopener noreferrer" className="w-7 h-7 text-main hover:text-secondary">
                             <IconX />
                         </a>
                         <a href="https://github.com/renderhive-project/" target="_blank" rel="noopener noreferrer" className="w-7 h-7 text-main hover:text-secondary">
@@ -161,7 +169,7 @@ const Footer = () => {
                 
                 {/* <!-- Background Gradient --> */}
                 <div className="w-screen h-[250px] bg-gradient-to-t from-primary-mid-dark from-[0%] to-primary-dark to-[100%]" aria-hidden="true"> </div>
-                <div className="w-screen h-[850px] sm:h-[500px] md:h-[380px] bg-primary-mid-dark" aria-hidden="true"> </div>
+                <div className="w-screen h-[860px] sm:h-[500px] md:h-[380px] bg-primary-mid-dark" aria-hidden="true"> </div>
 
             </div>
 

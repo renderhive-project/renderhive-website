@@ -10,7 +10,7 @@ import IconGithub from "@assets/icons/icon-github.svg?react";
 const HeroSection = () => {
 
     return (
-        <div id="section-hero" className="relative flex flex-col w-full mb-20 overflow-hidden items-center">
+        <div id="section-hero" className="relative flex flex-col w-full mb-16 sm:mb-20 overflow-hidden items-center">
 
             {/* <!-- Background pattern and glow --> */}
             <HoneycombPatternLight className="absolute -top-[606px] -left-[805px] sm:-top-[500px] sm:-left-[790px] lg:-top-[125px] lg:-left-[558px] w-[1188px] h-[1030px] text-white text-opacity-5" aria-hidden="true" />
@@ -33,17 +33,20 @@ const HeroSection = () => {
                             Crowdrendering
                             for Blender
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-main text-left">Renderhive is going to be the first fully decentralized render farm for Blender built on Web3 technologies. It will rely on the render power of Blender artists and enthusiasts participating in the hive.</p>
+                        <p className="mt-6 text-lg leading-8 text-main text-left">Renderhive is going to be the first fully decentralized render farm for Blender built on blockchain technologies. It will be powered by a global, public network of Blender artists and enthusiasts.</p>
                         <div className="mt-10 flex items-center gap-x-6">
-                            <button type="button" className="inline-flex items-center justify-center rounded-md py-2.5 px-8 bg-secondary hover:bg-secondary-mid font-semibold text-sm leading-6 text-primary-dark">
+                            <span className="inline-flex items-center justify-center rounded-md py-2.5 px-8 border border-secondary text-sm leading-6 text-secondary opacity-50">
+                                Coming Soon
+                            </span>
+                            {/* <button type="button" className="inline-flex items-center justify-center rounded-md py-2.5 px-8 bg-secondary hover:bg-secondary-mid font-semibold text-sm leading-6 text-primary-dark">
                             Get Started
-                            </button>
-                            <a href="https://renderhive-project.gitbook.io/renderhive-whitepaper/" className="text-sm font-semibold leading-6 text-white">Whitepaper (draft) <span aria-hidden="true">→</span></a>
+                            </button> */}
+                            <a href="https://renderhive-project.gitbook.io/renderhive-whitepaper/" className="text-sm font-semibold leading-6 text-white hover:text-secondary cursor-pointer">Whitepaper (draft) <span aria-hidden="true">→</span></a>
                         </div>
                         </div>
                         <div className="flex sm:mt-24 lg:ml-28 lg:mr-0 mt-12 sm:mt-10 lg:mt-6 lg:max-w-none lg:flex-none xl:-mr-[24rem]">
                         <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-                            <img src={AppScreenshot} alt="App screenshot" className="h-[610px]"/>
+                            <img src={AppScreenshot} alt="App screenshot" className="h-[610px] "/>
                         </div>
                         </div>
                     </div>
@@ -55,12 +58,12 @@ const HeroSection = () => {
                     <div className="lg:border-t border-secondary text-left lg:p-4">
                         <IconDecentralized className="my-6 w-12 h-12 text-secondary" />
                         <h2 className="mt-2 text-xl text-white ">Fully Decentralized</h2>
-                        <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The storage capacity and rendering power of the hive is distributed on the computers of all participating users – for a maximum of availability and stability. This is possible due to the underlying blockchain technology of Hedera Hashgraph and IPFS / Filecoin.</p>
+                        <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The storage capacity and rendering power of the hive is distributed on the computers of all participating users – for a maximum of availability and stability. This is possible due to the underlying blockchain technology of Hedera™ Hashgraph and IPFS / Filecoin.</p>
                     </div>
                     <div className="lg:border-t border-secondary text-left lg:p-4">
                         <IconCoin className="my-6 w-12 h-12 text-secondary" />
                         <h2 className="mt-2 text-xl text-white text-left">Fair & Transparent Pricing</h2>
-                        <p className="mt-2 text-md text-main">Render prices are determined by you and all the other members of the hive in a free market via a bid-ask mechanism. We just pass the small fees of the underlying web3 services and do not charge any fees for our own profit. This ensures that you get a fair price at any time and that your render job is executed at your defined maximum price.</p>
+                        <p className="mt-2 text-md text-main">Render prices are determined by you and all the other members of the hive in a free market via a bid-ask mechanism. We just pass the small fees of the underlying web3 services and do not charge any mandatory fees for our own profit. This ensures that you get a fair price at any time and that your render job is executed at your defined maximum price.</p>
                     </div>
                     <div className="lg:border-t border-secondary text-left lg:p-4">
                         <IconGithub className="my-6 w-12 h-12 text-secondary" />

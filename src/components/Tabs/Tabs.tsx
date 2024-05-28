@@ -10,6 +10,7 @@ type TabItemProps = {
 type TabsProps = {
     children: React.ReactElement<TabItemProps>[];
     className?: string;
+    onChange?: (activeTab: string) => void;
 };
 
 const TabItem: React.FC<TabItemProps> = ({ children, id }) => {
@@ -20,7 +21,7 @@ const TabItem: React.FC<TabItemProps> = ({ children, id }) => {
     );
 };
 
-const Tabs: React.FC<TabsProps> = ({ children, className }) => {
+const Tabs: React.FC<TabsProps> = ({ children, className, onChange }) => {
     const location = useLocation();
     const [activeTab, setActiveTab] = useState(children[0].props.name);
 
@@ -36,6 +37,7 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
         const childWithHash = children.find(child => child.props.id === hash);
         if (childWithHash) {
             setActiveTab(childWithHash.props.name);
+            onChange && onChange(childWithHash.props.name); // Call onChange here
 
             // Scroll to the position of the tab after the DOM updates
             setTimeout(() => {
@@ -51,11 +53,18 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
             }, 100);
         }
 
-    }, [location]);
+    }, [location, onChange]);
+
+    // listen for tab changes
+    useEffect(() => {
+        if (onChange) {
+        onChange(activeTab);
+        }
+    }, [activeTab, onChange]);
 
     return (
         <div className={`flex flex-col space-y-0 lg:space-y-4 items-center w-full h-full lg:overflow-hidden ${className}`}>
-            <div className="w-full px-8 md:hidden">
+            <div className="w-full px-8 lg:hidden">
                 <label htmlFor="tabs" className="sr-only">
                     Select a tab
                 </label>
@@ -71,7 +80,7 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
                     ))}
                 </select>
             </div>
-            <div className="hidden border border-primary-light rounded-lg p-[4px] md:block">
+            <div className="hidden border border-primary-light rounded-lg p-[4px] lg:block">
                 <nav className="flex space-x-1" aria-label="Tabs">
                     {children.map((child, index) => (
                         <button
