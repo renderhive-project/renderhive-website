@@ -73,9 +73,12 @@ const NavBar = ({ navItems }: { navItems: NavItem[] }) => {
 
                             </div>
                             <div className="hidden lg:block lg:justify-end">
-                                <button type="button" className="inline-flex items-center justify-center rounded-md py-2.5 px-8 bg-secondary hover:bg-secondary-mid font-semibold text-sm leading-6 text-primary-dark">
+                                <span className="inline-flex items-center justify-center rounded-md py-2.5 px-8 border border-secondary bg-primary-dark text-sm leading-6 text-secondary opacity-50">
+                                    Coming Soon
+                                </span>
+                                {/* <button type="button" className="inline-flex items-center justify-center rounded-md py-2.5 px-8 bg-secondary hover:bg-secondary-mid font-semibold text-sm leading-6 text-primary-dark">
                                     Download
-                                </button>
+                                </button> */}
                             </div>
 
                         

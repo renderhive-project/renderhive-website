@@ -1,13 +1,16 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+// Contexts
+import { ContactFormContext } from "./contexts/ContactFormContext/ContactFormContext";
 
 // Pages
 import LandingPage from "./pages/landing-page/LandingPage";
 import AboutPage from "./pages/about/AboutPage";
 
 // components
+import ContactFormModal from "./components/ContactForm/ContactForm";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
@@ -15,7 +18,7 @@ export default function AppRouter() {
 
   // Navigation menu items
   const NAVIGATION_MENU_ITEMS = [
-    { href: '/#section-how-it-works', label: 'How it Works', threshold: 0.15 },
+    { href: '/#section-technologies', label: 'Technologies', threshold: 0.15 },
     { href: '/#section-roadmap', label: 'Roadmap', threshold: 0.50 },
     { href: '/#section-features', label: 'Features', threshold: 0.50 },
     { href: '/#section-pricing', label: 'Pricing', threshold: 0.50 },
@@ -24,24 +27,23 @@ export default function AppRouter() {
   ];
 
   const Layout = () => {
+    const [showContactForm, setShowContactForm] = useState(false);
 
     /* <CODE TO HANDLE ANCHOR LINKS >
        Source: https://dev.to/mindactuate/scroll-to-anchor-element-with-react-router-v6-38op
        Slightly modified to work with the navbar height
     */
     const location = useLocation();
-    const lastHash = useRef('');
   
     // listen to location change using useEffect with location as dependency
     // https://jasonwatmore.com/react-router-v6-listen-to-location-route-change-without-history-listen
     useEffect(() => {
-      lastHash.current = location.hash.slice(1);
+      const lastHash = location.hash.slice(1);
 
-      if (lastHash.current && document.getElementById(lastHash.current)) {
+      if (lastHash && document.getElementById(lastHash)) {
         setTimeout(() => {
-          //  s
           const navbarHeight = document.querySelector('header')?.offsetHeight || 0;
-          const element = document.getElementById(lastHash.current)
+          const element = document.getElementById(lastHash)
           if (element) {
             const elementPosition = element.getBoundingClientRect().top + window.scrollY
             window.scrollTo({
@@ -49,7 +51,6 @@ export default function AppRouter() {
               behavior: 'smooth'
             })
           }
-          // s
         }, 100)
       } else {
         window.scrollTo(0, 0);
@@ -58,7 +59,7 @@ export default function AppRouter() {
     /* </CODE TO HANDLE ANCHOR LINKS > */
 
     return (
-      <>
+      <ContactFormContext.Provider value={{ showContactForm, setShowContactForm }}>
         <div className="relative flex flex-col bg-primary-dark">
 
         {/* Navigation Bar */}
@@ -66,12 +67,16 @@ export default function AppRouter() {
 
         {/* Web Content */}
         <Outlet />
+
+        {/* Modal Contact Form */}
+        <ContactFormModal />
           
         </div>
 
         {/* Footer */}
         <Footer />
-      </>
+
+      </ContactFormContext.Provider>
     );
   };
 
@@ -88,10 +93,6 @@ export default function AppRouter() {
           path: "about",
           element: <AboutPage />,
         },
-        // {
-        //   path: "/newpage",
-        //   element: ((boolean expression) ? <Page1 /> : <Navigate to="/page2" replace />),
-        // },
 
         // everything else redirects to landing page
         {
@@ -100,9 +101,9 @@ export default function AppRouter() {
         },
       ],
     },
-  ], {basename: "/dev/"});
+  ], {basename: "/"});
 
   return (
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   )
 }

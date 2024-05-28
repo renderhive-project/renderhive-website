@@ -42,8 +42,8 @@ const HeroSection = () => {
                         </div>
                         </div>
                         <div className="flex sm:mt-24 lg:ml-28 lg:mr-0 mt-12 sm:mt-10 lg:mt-6 lg:max-w-none lg:flex-none xl:-mr-[24rem]">
-                        <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-                            <img src={AppScreenshot} alt="App screenshot" className="h-[610px]"/>
+                        <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none bg-white">
+                            <img src={AppScreenshot} alt="App screenshot" className="h-[610px] "/>
                         </div>
                         </div>
                     </div>

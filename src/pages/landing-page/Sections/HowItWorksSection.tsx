@@ -4,8 +4,11 @@ import { StatsGrid, StatsRow, StatsCard } from "../../../components/StatsGrid/St
 // images
 import HoneycombPatternSection from "@assets/honeycomb_pattern_sections.svg?react";
 import HoneycombBlockchain from "@assets/web3_services_honeycomb_blockchain.svg?react";
-import ComponentsScreenshot from "@assets/hero_app_screenshot.png";
+import BackgroundBeeTechnologies from "@assets/bg_bee_technologies_about.svg?react";
+import ServiceAppRenderRequests from "@assets/service_app_render_requests.png";
 import ComponentsSmartContract from "@assets/web3_smart_contract.svg?react";
+import NodeTypesImage from "@assets/node_types_user_sidebars.png";
+import NodeTypesImageMobile from "@assets/node_types_user_sidebars_mobile.png";
 
 // icons
 import IconRenderNodes from "@assets/icons/icon-bee.svg?react";
@@ -22,33 +25,39 @@ const AboutSection = () => {
       }
 
     return (
-        <div className="relative w-screen flex justify-center overflow-hidden pb-96 sm:pb-96">
+        <div className="relative w-screen flex justify-center overflow-hidden pt-24 lg:pt-0 pb-64 lg:pb-96">
 
-            <div id="section-how-it-works" className="relative flex flex-col w-full h-full max-w-8xl mx-0 p-6 md:p-8 top-[11rem] sm:top-[11rem] md:top-[11rem] lg:top-[20rem] space-y-24 sm:space-y-36 items-center z-10">
+            <div id="section-technologies" className="relative flex flex-col w-full h-full max-w-8xl mx-0 p-6 md:p-8 top-[11rem] sm:top-[11rem] md:top-[11rem] lg:top-[20rem] space-y-24 sm:space-y-36 items-center z-10">
 
-                {/* <!-- Section Header: How It Works --> */}
+                {/* <!-- Section Header: Technologies --> */}
                 <div className="w-[60%] sm:w-[63%] md:w-[65%] lg:w-[58%] xl:w-[62%] z-10 mb-28">
                     <div className="p-4">
-                        <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">How It Works</span>
+                        <span className="rounded-full bg-secondary-dark px-4 py-2 text-xs sm:text-sm text-secondary">Technologies</span>
                     </div>
                     <h1 className="text-lg leading-10 sm:text-2xl sm:leading-12 md:text-3xl md:leading-12 lg:text-4xl lg:leading-12 xl:text-5xl xl:leading-15 text-white">
                         A Hive!? So, Where's the Honey?
                     </h1>
                     <p className="text-md sm:text-base xl:text-lg text-main leading-6 p-0 m-0 md:px-12">
-                        The renderhive is somewhat comparable to a honey bee hive – hence the name. But instead of collecting pollen to produce honey, our hive inhabitants render the pixels of your Blender artworks.
+                        The renderhive is somewhat comparable to a honey bee hive – hence the name. But instead of collecting pollen to produce honey, our hive inhabitants compute the pixels of your Blender projects to produce your images.
                     </p>
+                        
                 </div>
 
                 {/* <!-- Section Content: Node Types --> */}
                 <div className="p-0 xl:mx-20 flex-none lg:flex justify-between space-y-12 lg:space-y-0 lg:space-x-20 text-left z-10">
 
-                    <div className="space-y-6 lg:w-1/2">
+                    <div className="flex flex-col space-y-6 lg:w-1/2">
                         <h1 className="text-xl leading-10 md:text-2xl lg:text-3xl md:leading-12 xl:leading-10 text-white">
-                            The renderhive consists of two different node types
+                            The renderhive consists of two different node types ...
                         </h1>
                         <p className="text-sm sm:text-base leading-6 text-main">
-                            ... that fulfill different tasks in the Renderhive network. Each user can transition between the roles at any time and no node is more important or has more rights than the other. All nodes are treated equally and according to the same rules written in our software code.
+                            ... which fulfill different tasks in the Renderhive network. Each user can transition between the roles at any time and no node is more important or has more rights than the other. All nodes are treated equally and according to the same rules written in our software code.
                         </p>
+
+                        <div className="relative flex-grow fade-out-bottom min-h-[425px] lg:min-h-[275px] max-h-[550px] overflow-hidden">
+                            <img src={NodeTypesImage} className="hidden sm:block absolute w-full object-top object-cover" />
+                            <img src={NodeTypesImageMobile} className="sm:hidden absolute w-full object-top object-cover" />
+                        </div>
                     </div>
                     <div className="space-y-12 lg:w-1/2">
                         <div >
@@ -57,7 +66,7 @@ const AboutSection = () => {
                                 Render Nodes
                             </h2>
                             <p className="text-sm sm:text-base leading-6 text-main">
-                                They are the workers in our hive. They do the render work. Render nodes are Blender users or enthusiasts who offer their computer's render power for a self-chosen price to the client nodes. Whenever the node is online, it takes part in the render job distribution and renders frames or parts of a frame.
+                            Render nodes are like the bees of our hive. They gather the Blender files, perform the rendering work, and produce the final pixels for your Blender projects, much like bees collect pollen and create honey. Render nodes are Blender users and enthusiasts offering their computer's render power for a self-chosen minimum price. Whenever the node is online, it takes part in the render job distribution and rendering process.
                             </p>
                         </div>
 
@@ -67,7 +76,7 @@ const AboutSection = () => {
                                 Client Nodes
                             </h2>
                             <p className="text-sm sm:text-base leading-6 text-main ">
-                                They are the creatives in our hive. They provide the Blender files and artworks to be rendered. Client nodes submit render jobs to the renderhive and request rendering for a given price. As soon as enough render nodes with matching price offers are available, the render job will be processed and the client node pays for the final result.
+                                Client nodes are similar to what flowers are for a honey bee hive. They provide the Blender files for the render nodes to compute images, similar to how flowers provide pollen for bees to produce honey. Client nodes submit render jobs to the renderhive and request rendering for a given maximum price. As soon as enough render nodes with matching price offers are available, the render job will be processed and the client node pays for the final result.
                             </p>
                         </div>
                     </div>
@@ -85,19 +94,19 @@ const AboutSection = () => {
                                 Built on Web3 Technologies
                             </h1>
                             <p className="text-sm sm:text-base leading-6 text-main md:mr-32 lg:mr-56 xl:pr-78">
-                            While honey bees communicate via pheromones and waggle dances, the nodes in our renderhive rely on distributed ledger technologies – also known as blockchains. They make sure that all the nodes in the hive have a common understanding of who renders what part of a specific frame and at which price. The project relies on the following technologies and web3 services.
+                            While honey bees communicate via pheromones and waggle dances, the nodes in our renderhive rely on distributed ledger technologies which are more broadly known as blockchains. They make sure that all the nodes in the hive have a common understanding of who renders what part of a specific Blender project, at which price, and in which specific order. That happens without a central farm operator controlling these processes. With that, Renderhive is going to be part of the upcoming Web 3.0, the next evolution of the internet, which is all about decentralization, distributed ledger technologies, and true digital ownership. Below you can learn more about the web3 technologies and services our network is built on.
                             </p>
 
-                            <HoneycombBlockchain className='absolute hidden md:block md:-bottom-[15rem] lg:left-[12rem] lg:-bottom-[3rem] lg:left-[12rem]'/>
+                            <HoneycombBlockchain className='absolute hidden md:block md:-bottom-[16rem] lg:left-[12rem] lg:-bottom-[5rem] lg:left-[12rem]'/>
                         </div>
 
                         {/* Individual Web3 Services */}
                         <div className="lg:mx-0 xl:mx-20 flex-none lg:flex justify-between lg:space-x-10 space-y-10 lg:space-y-0">
                             <a href="https://www.hedera.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
                                 <IconHedera className="w-12 h-12 text-secondary" />
-                                <h2 className="text-lg text-white ">Hedera Hashgraph</h2>
+                                <h2 className="text-lg text-white ">Hedera™ Hashgraph</h2>
                                 <p className="flex-grow text-sm sm:text-base text-main">
-                                    Hedera's distributed ledger technology offers an enterprise-grade, carbon-negative technology stack and is built with a sustainable long-term vision. It offers low, predictable network fees and its unique consensus mechanism ensures a fair, verifiable ordering of our render jobs and a secure payment system. It's native cryptocurrency, hbar (ħ), is used as the currency in our hive to buy and sell render power.
+                                    Hedera™ Hashgraph's distributed ledger technology offers an enterprise-grade, carbon-negative technology stack and is built with a sustainable long-term vision. It offers low, predictable network fees and its unique consensus mechanism ensures a fair, verifiable ordering of our render jobs and a secure payment system. It's native cryptocurrency, hbar (ℏ), is used as the currency in our hive to buy and sell render power.
                                 </p>
                                 <p className="text-sm sm:text-base text-white group-hover:text-secondary-mid">
                                     <span className="py-2 border-b border-secondary">
@@ -108,9 +117,9 @@ const AboutSection = () => {
 
                             <a href="https://www.ipfs.io/" target="_blank" rel="noopener noreferrer" className="group flex flex-col lg:w-1/3 p-8 space-y-4 border border-primary-mid-dark hover:border-primary-navy rounded-xl text-left bg-primary-dark hover:bg-primary-mid-dark">
                                 <IconIPFS className="w-12 h-12 text-secondary" />
-                                <h2 className="text-lg text-white ">Interplanatary File System (IPFS)</h2>
+                                <h2 className="text-lg text-white ">Interplanetary File System (IPFS)</h2>
                                 <p className="flex-grow text-sm sm:text-base text-main">
-                                The InterPlanetary File System is a distributed data storage and transfer protocol. Its unique content-addressing approach locates files not by their storage location, but by their content. This makes sure that files are accessible by all nodes and guarentees that all nodes get the exact same file. In connection with Hedera Hashgraph, it also provides copyright proofs for all Blender files submitted to our renderhive.
+                                The InterPlanetary File System is a distributed data storage and transfer protocol. Its unique content-addressing approach locates files not by their storage location, but by their content. This makes sure that files are accessible by all nodes and guarentees that all nodes get the exact same file. In connection with Hedera™ Hashgraph, it also provides copyright proofs for all Blender files submitted to our renderhive.
                                 </p>
                                 <p className="text-sm sm:text-base text-white group-hover:text-secondary-mid">
                                     <span className="py-2 border-b border-secondary">
@@ -146,7 +155,7 @@ const AboutSection = () => {
                     A Hive Without Queen
                     </h1>
                     <p className="text-md sm:text-base text-main leading-6">
-                    Unlike conventional render farms, the renderhive is not coordinated by a central authority or middle-man that mediates between the render and client nodes with centralized servers. It is a peer-to-peer network that is managed by rules written into the code of the decentralized Renderhive Service App and the project's smart contracts.
+                    Unlike conventional render farms, the renderhive is not coordinated by a central farm operator that hosts render servers and determines when and in which order jobs are computed. We are a peer-to-peer network that is managed by rules written into the code of the Renderhive Service App and the project's smart contracts.
                     </p>
                 </div>
 
@@ -158,27 +167,27 @@ const AboutSection = () => {
                     {/* Individual Web3 Services */}
                     <div className="lg:mx-0 xl:mx-20 flex-none lg:flex justify-between lg:space-x-10 space-y-10 lg:space-y-0">
 
-                        <div className="flex flex-col justify-between h-[525px] sm:h-[550px] md:h-[500px] lg:h-[625px] lg:w-1/2 p-0 rounded-xl text-left border border-primary-mid-dark bg-primary-dark">
+                        <div className="flex flex-col justify-between h-[525px] sm:h-[550px] md:h-[500px] lg:h-[625px] lg:w-1/2 p-0 rounded-xl text-left border border-primary-mid-dark bg-primary-dark overflow-hidden">
                             <div className="p-8 pb-2 space-y-4 lg:space-y-4">
                                 <h2 className="text-lg text-white ">Renderhive Service App</h2>
                                 <p className="text-sm sm:text-base text-main">
-                                    The Renderhive Service App is the software that is running on the computer of each render node and client node. It manages the local functions of the node and provides a local web front-end that each user can access from their web browser. It is open source so everyone can check that it is safe and has no backdoors.
+                                    The Renderhive Service App is the software that is running on the computer of each render node and client node. It manages the local functions of the node and provides a local web front-end that the node owner can safely access from their web browser. As an open source software, it ensures transparency and allows the community to use, to modify, and to contribute to its development.
                                 </p>
                             </div>
-                            <div className="relative w-full h-full overflow-hidden">
-                                <img src={ComponentsScreenshot} className="absolute object-cover object-left top-[10%] left-[25%]"/>
+                            <div className="relative w-full h-full">
+                                <img src={ServiceAppRenderRequests} className="absolute object-cover object-left top-[10%] left-[25%]"/>
                             </div>
                         </div>
 
                         <div className="flex flex-col justify-between h-[650px] sm:h-[550px] md:h-[500px] lg:h-[625px] lg:w-1/2 p-0 rounded-xl text-left border border-primary-mid-dark bg-primary-dark">
 
                             <div className="relative w-full h-full overflow-hidden">
-                                <ComponentsSmartContract className="absolute object-cover -top-[0px] right-[25%] sm:right-[75px] "/>
+                                <ComponentsSmartContract className="absolute object-cover -top-[0px] right-[3rem] sm:right-[3rem]"/>
                             </div>
                             <div className="p-8 pt-2 space-y-4 lg:space-y-4">
                                 <h2 className="text-lg text-white ">Smart Contracts</h2>
                                 <p className="text-sm sm:text-base text-main">
-                                Smart contracts are one of the most exciting pieces of web3 technologies. They are small, immutable computer programs that run on a blockchain. These contracts execute automatically if certain verifiable conditions are met. For example, the renderhive's smart contract manages the payment flows between the render nodes and client nodes. Client nodes transfer money to the smart contract when they submit a job. The smart contract only pays the render nodes if they deliver the render results. Since noone except you – not even the developers – have access to the funds on the smart contract, the money is safe by design.
+                                Smart contracts are one of the most exciting pieces of web3 technologies. They are small, immutable computer programs that can run on a blockchain. These contracts execute automatically if pre-defined, verifiable conditions are met. For example, the renderhive smart contract manages the payment flows between the render nodes and client nodes. Client nodes transfer money to the smart contract when they submit a job. The smart contract only pays the render nodes if they deliver the render results. Since noone except you – not even the developers of the contract – have access to the funds on the smart contract, the money is safe by design.
                                 </p>
                             </div>
                         </div>
@@ -198,7 +207,7 @@ const AboutSection = () => {
                     Network Statistics
                     </h1>
                     <p className="text-md sm:text-base text-main leading-6">
-                    These are some of the real-time numbers of the Renderhive network. The numbers are constantly changing as nodes go on-/offline, render jobs are submitted or finalized, payments are made, etc. 
+                    The following stats show some of the important metrics of the Renderhive network with explanations and random example numbers. As soon as the network goes live, this section will display verifiable on-chain data of the network in real-time. 
                     </p>
                 </div>
 
@@ -241,13 +250,18 @@ const AboutSection = () => {
                 {/* <!-- Background Gradient 2 --> */}
                 <div className=" w-screen h-[500px] top-[0px] bg-gradient-to-t from-primary-mid-dark to-primary-dark" aria-hidden="true"> </div>
                 <div className=" w-screen h-[800px] sm:h-[900px] md:h-[550px] lg:h-[450px] top-[500px] bg-primary-mid-dark" aria-hidden="true"> </div>
-                <div className=" w-screen h-[400px] top-[1080px] bg-gradient-to-t from-primary-dark to-primary-mid-dark" aria-hidden="true"> </div>
+                <div className=" w-screen h-[1200px] top-[1080px] bg-gradient-to-t from-primary-dark to-primary-mid-dark" aria-hidden="true"> </div>
 
                 {/* <!-- Background Patterns --> */}
                 <HoneycombPatternSection className="absolute -top-[0px] -left-[400px] sm:-top-[0px] sm:-left-[320px] lg:-top-[0px] lg:-left-[235px] xl:-left-[185px] w-[465px] h-[528px] text-secondary" aria-hidden="true" />
                 <HoneycombPatternSection className="absolute top-[268px] -right-[400px] sm:top-[268px] sm:-right-[320px] lg:top-[268px] lg:-right-[235px] xl:-right-[185px] w-[465px] h-[528px] text-secondary" aria-hidden="true" />
 
             </div>
+
+            {/* <!-- Bees --> */}
+            <BackgroundBeeTechnologies className='absolute top-[0rem] right-[1.5rem] sm:right-[1.5rem] md:right-[3rem] lg:right-[10rem] text-main opacity-50'/>
+            {/* <BackgroundBeeNoQueen className='absolute hidden lg:block lg:top-[172rem] lg:left-[2rem] text-main opacity-50'/> */}
+            {/* <BackgroundBeeNoQueen className='absolute hidden md:block top-[235rem] right-[3rem] text-main opacity-50 scale-x-[-1] rotate-[20deg]'/> */}
 
         </div>
     );
