@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# Renderhive Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Renderhive Project
 
-Currently, two official plugins are available:
+This project was created to establish the first fully decentralized crowdrendering platform for [Blender](https://www.blender.org) built on the Web3 technologies of [Hedera Hashgraph](https://www.hedera.com/) and [IPFS](https://ipfs.tech) / [Filecoin](https://filecoin.io). The aim is to gather the latent CPU/GPU power of the Blender community by creating a free marketplace where Blender artists can buy and sell rendering time on each others computers in times they don't need it for their own projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Please visit [https://www.renderhive.io](https://www.renderhive.io/) to learn more about the project.
 
-## Expanding the ESLint configuration
+### Contact
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* **Project Coordination:** Christian Stolze
+* **Contact:** contact@renderhive.io
 
-- Configure the top-level `parserOptions` property like this:
+## About this repository
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This repository contains the code of the [Renderhive project website](https://www.renderhive.io/).
