@@ -38,7 +38,7 @@ const AboutSection = () => {
                         A Hive!? So, Where's the Honey?
                     </h1>
                     <p className="text-md sm:text-base xl:text-lg text-main leading-6 p-0 m-0 md:px-12">
-                        The renderhive is somewhat comparable to a honey bee hive – hence the name. But instead of collecting pollen to produce honey, our hive inhabitants compute the pixels of your Blender projects to produce your images.
+                        The renderhive is somewhat comparable to a honey bee hive – hence the name. But instead of collecting pollen to produce honey, our hive inhabitants compute the pixels of your Blender projects.
                     </p>
                         
                 </div>
@@ -51,7 +51,7 @@ const AboutSection = () => {
                             The renderhive consists of two different node types ...
                         </h1>
                         <p className="text-sm sm:text-base leading-6 text-main">
-                            ... which fulfill different tasks in the Renderhive network. Each user can transition between the roles at any time and no node is more important or has more rights than the other. All nodes are treated equally and according to the same rules written in our software code.
+                            ... which fulfill different tasks in the Renderhive network. A node is a computer on the network, which is privately controlled by a user. Each node can transition between the two roles at any time and no node is more important or has more rights than the other. All nodes are treated equally and according to the rules written transparently into our open-source software.
                         </p>
 
                         <div className="relative flex-grow fade-out-bottom min-h-[425px] lg:min-h-[275px] max-h-[550px] overflow-hidden">
@@ -66,7 +66,7 @@ const AboutSection = () => {
                                 Render Nodes
                             </h2>
                             <p className="text-sm sm:text-base leading-6 text-main">
-                            Render nodes are like the bees of our hive. They gather the Blender files, perform the rendering work, and produce the final pixels for your Blender projects, much like bees collect pollen and create honey. Render nodes are Blender users and enthusiasts offering their computer's render power for a self-chosen minimum price. Whenever the node is online, it takes part in the render job distribution and rendering process.
+                            Render nodes are like the bees of our hive. They gather the Blender files, perform the rendering work, and produce the final pixels for your Blender projects, much like bees collect pollen and create honey. Render nodes are Blender users and Blender enthusiasts offering their computer's render power for a self-chosen minimum price. Whenever the node is online, it takes part in the render job distribution and rendering processes.
                             </p>
                         </div>
 
@@ -89,15 +89,15 @@ const AboutSection = () => {
                     {/* <!-- Web3 Services --> */}
                     <div className="space-y-12 z-10">
                         {/* General */} 
-                        <div className="relative md:h-[440px] lg:h-[600px] flex flex-col rounded-xl bg-primary-mid-dark border border-primary-navy xl:mx-20 p-8 space-y-6 text-left overflow-hidden">
+                        <div className="relative md:h-[540px] lg:h-[600px] flex flex-col rounded-xl bg-primary-mid-dark border border-primary-navy xl:mx-20 p-8 space-y-6 text-left overflow-hidden">
                             <h1 className="text-2xl leading-10 md:text-4xl md:leading-12 xl:leading-10 text-white">
                                 Built on Web3 Technologies
                             </h1>
-                            <p className="text-sm sm:text-base leading-6 text-main md:mr-32 lg:mr-56 xl:pr-78">
-                            While honey bees communicate via pheromones and waggle dances, the nodes in our renderhive rely on distributed ledger technologies which are more broadly known as blockchains. They make sure that all the nodes in the hive have a common understanding of who renders what part of a specific Blender project, at which price, and in which specific order. That happens without a central farm operator controlling these processes. With that, Renderhive is going to be part of the upcoming Web 3.0, the next evolution of the internet, which is all about decentralization, distributed ledger technologies, and true digital ownership. Below you can learn more about the web3 technologies and services our network is built on.
+                            <p className="text-sm sm:text-base leading-6 text-main md:mr-0 lg:mr-32">
+                                While honey bees communicate via pheromones and waggle dances, the nodes in our renderhive rely on distributed ledger technologies which are more broadly known as blockchains. These technologies make sure that all the nodes in the hive have a common understanding of who renders what part of a specific Blender project, at which price, and in which specific order. That happens without a central farm operator overlooking or controlling these processes. With that, Renderhive is going to be part of the upcoming Web 3.0, the next evolution of the internet, which is all about decentralization, distributed ledger technologies, and true digital ownership. Below you can learn more about the web3 technologies and services our network is built on.
                             </p>
 
-                            <HoneycombBlockchain className='absolute hidden md:block md:-bottom-[16rem] lg:left-[12rem] lg:-bottom-[5rem] lg:left-[12rem]'/>
+                            <HoneycombBlockchain className='absolute hidden md:block md:-bottom-[14rem] lg:left-[12rem] lg:-bottom-[7rem] lg:left-[12rem]'/>
                         </div>
 
                         {/* Individual Web3 Services */}
@@ -155,7 +155,7 @@ const AboutSection = () => {
                     A Hive Without Queen
                     </h1>
                     <p className="text-md sm:text-base text-main leading-6">
-                    Unlike conventional render farms, the renderhive is not coordinated by a central farm operator that hosts render servers and determines when and in which order jobs are computed. We are a peer-to-peer network that is managed by rules written into the code of the Renderhive Service App and the project's smart contracts.
+                    Unlike conventional render farms, the renderhive is not coordinated by a central farm operator that hosts render servers and determines when and in which order jobs are computed. Renderhive is a peer-to-peer network that is managed fully decentralized, based on the rules written into the code of our Renderhive Service App and smart contracts.
                     </p>
                 </div>
 
@@ -171,7 +171,7 @@ const AboutSection = () => {
                             <div className="p-8 pb-2 space-y-4 lg:space-y-4">
                                 <h2 className="text-lg text-white ">Renderhive Service App</h2>
                                 <p className="text-sm sm:text-base text-main">
-                                    The Renderhive Service App is the software that is running on the computer of each render node and client node. It manages the local functions of the node and provides a local web front-end that the node owner can safely access from their web browser. As an open source software, it ensures transparency and allows the community to use, to modify, and to contribute to its development.
+                                    The Renderhive Service App is the software that is running on the computer of each network node. It manages the local functions of the node and provides a local web front-end that the node owner can safely access from their web browser. As an open source software, it ensures transparency and allows the community to use, to modify, and to contribute to its development.
                                 </p>
                             </div>
                             <div className="relative w-full h-full">
@@ -207,7 +207,7 @@ const AboutSection = () => {
                     Network Statistics
                     </h1>
                     <p className="text-md sm:text-base text-main leading-6">
-                    The following stats show some of the important metrics of the Renderhive network with explanations and random example numbers. As soon as the network goes live, this section will display verifiable on-chain data of the network in real-time. 
+                    The following statistics show some of the important metrics of the Renderhive network with explanations and random example numbers. As soon as the network goes live, this section will display verifiable on-chain data of the network in real-time. 
                     </p>
                 </div>
 

@@ -19,9 +19,10 @@ import ImageOrderBook from "@assets/pricing_mechanism_order_book.png";
 
 // icons
 import IconFeaturesRewards from "@assets/icons/icon-rewards.svg?react";
+import IconFeaturesHoney from "@assets/icons/icon-honey.svg?react";
 import IconFeaturesRendering from "@assets/icons/icon-renderprojects.svg?react";
 import IconFeaturesOnchain from "@assets/icons/icon-onchain.svg?react";
-import IconFeaturesOpensource from "@assets/icons/icon-opensource.svg?react";
+// import IconFeaturesOpensource from "@assets/icons/icon-opensource.svg?react";
 
 
 const RoadmapSoftwareSection = () => {
@@ -174,7 +175,7 @@ const RoadmapSoftwareSection = () => {
                                 {/* Feature: Render Projects */}
                                 <div className="flex flex-col sm:flex-row bg-primary-dark rounded-xl space-y-2 sm:space-y-0 sm:space-x-6 p-6 items-center sm:items-start">
                                     <div className="flex flex-col ">
-                                        <IconFeaturesRendering />
+                                        <IconFeaturesRendering className="text-secondary" />
                                     </div>
                                     <div className="flex flex-col space-y-2">
                                         <h3 className="text-md text-white text-center sm:text-left">Collaborative Rendering</h3>
@@ -185,18 +186,29 @@ const RoadmapSoftwareSection = () => {
                                 {/* Feature: Earn Rewards */}
                                 <div className="flex flex-col sm:flex-row bg-primary-dark rounded-xl space-y-2 sm:space-y-0 sm:space-x-6 p-6 items-center sm:items-start">
                                     <div className="flex flex-col ">
-                                        <IconFeaturesRewards />
+                                        <IconFeaturesRewards className="text-secondary" />
                                     </div>
                                     <div className="flex flex-col space-y-2">
                                         <h3 className="text-md text-white text-center sm:text-left">Earn Rewards</h3>
-                                        <p className="text-sm text-main text-center sm:text-left">By offering the render power of your own computer to others on Renderhive, you can earn rewards for each Blender project your node helps to render.</p>
+                                        <p className="text-sm text-main text-center sm:text-left">By offering the render power of your own computer to others on Renderhive, you can earn rewards for each Blender project your node helps to render – at a price that you choose.</p>
+                                    </div>
+                                </div>
+                                
+                                {/* Feature: Store Render Power */}
+                                <div className="flex flex-col sm:flex-row bg-primary-dark rounded-xl space-y-2 sm:space-y-0 sm:space-x-6 p-6 items-center sm:items-start">
+                                    <div className="flex flex-col ">
+                                        <IconFeaturesHoney className="text-secondary" />
+                                    </div>
+                                    <div className="flex flex-col space-y-2">
+                                        <h3 className="text-md text-white text-center sm:text-left">Render Honey</h3>
+                                        <p className="text-sm text-main text-center sm:text-left">You can also offer your render power for free to the network when you don't need it and then reclaim it later. It's like storing your resources for tough times in the renderhive, just like bees store their honey. Make render honey!</p>
                                     </div>
                                 </div>
                                 
                                 {/* Feature: On-chain */}
                                 <div className="flex flex-col sm:flex-row bg-primary-dark rounded-xl space-y-2 sm:space-y-0 sm:space-x-6 p-6 items-center sm:items-start">
                                     <div className="flex flex-col ">
-                                        <IconFeaturesOnchain />
+                                        <IconFeaturesOnchain className="text-secondary" />
                                     </div>
                                     <div className="flex flex-col space-y-2">
                                         <h3 className="text-md text-white text-center sm:text-left">On-chain & Trustless</h3>
@@ -205,15 +217,15 @@ const RoadmapSoftwareSection = () => {
                                 </div>
                                 
                                 {/* Feature: Open Source */}
-                                <div className="flex flex-col sm:flex-row bg-primary-dark rounded-xl space-y-2 sm:space-y-0 sm:space-x-6 p-6 items-center sm:items-start">
+                                {/* <div className="flex flex-col sm:flex-row bg-primary-dark rounded-xl space-y-2 sm:space-y-0 sm:space-x-6 p-6 items-center sm:items-start">
                                     <div className="flex flex-col ">
-                                        <IconFeaturesOpensource />
+                                        <IconFeaturesOpensource className="text-secondary" />
                                     </div>
                                     <div className="flex flex-col space-y-2">
                                         <h3 className="text-md text-white text-center sm:text-left">Open Source</h3>
                                         <p className="text-sm text-main text-center sm:text-left">Like Blender, the Renderhive software is free and open source. This enables anyone use, to share, to verify, and to modify it's code base for their own needs.</p>
                                     </div>
-                                </div>
+                                </div> */}
 
                             </div>
                         </div>

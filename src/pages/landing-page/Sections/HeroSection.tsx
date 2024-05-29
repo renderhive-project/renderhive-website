@@ -33,7 +33,7 @@ const HeroSection = () => {
                             Crowdrendering
                             for Blender
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-main text-left">Renderhive is going to be the first fully decentralized render farm for Blender built on blockchain technologies. It will be powered by a global, public network of Blender artists and enthusiasts.</p>
+                        <p className="mt-6 text-lg leading-8 text-main text-left">Renderhive is going to be the first fully decentralized render farm for Blender built on blockchain technologies. It will be powered by a global network of Blender users and enthusiasts.</p>
                         <div className="mt-10 flex items-center gap-x-6">
                             <span className="inline-flex items-center justify-center rounded-md py-2.5 px-8 border border-secondary text-sm leading-6 text-secondary opacity-50">
                                 Coming Soon
@@ -55,20 +55,20 @@ const HeroSection = () => {
 
                 {/* Important Features */}
                 <div className="mx-8 sm:mx-8 md:mx-8 lg:mx-0 xl:mx-20 flex-none lg:flex lg:p-8 justify-between lg:space-x-10 space-y-10 lg:space-y-0">
-                    <div className="lg:border-t border-secondary text-left lg:p-4">
+                    <div className="lg:w-1/3 lg:border-t border-secondary text-left lg:p-4">
                         <IconDecentralized className="my-6 w-12 h-12 text-secondary" />
                         <h2 className="mt-2 text-xl text-white ">Fully Decentralized</h2>
-                        <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The storage capacity and rendering power of the hive is distributed on the computers of all participating users – for a maximum of availability and stability. This is possible due to the underlying blockchain technology of Hedera™ Hashgraph and IPFS / Filecoin.</p>
+                        <p className="mt-2 text-md text-main">Renderhive is not a cloud service. It's a crowdservice! The render power and the storage capacity of the renderhive is distributed on the computers of all our network users. This decentralization guarentees a maximum of availability as well as stability and is possible thanks to the underlying blockchain technologies of Hedera™ Hashgraph and IPFS / Filecoin.</p>
                     </div>
-                    <div className="lg:border-t border-secondary text-left lg:p-4">
+                    <div className="lg:w-1/3 lg:border-t border-secondary text-left lg:p-4">
                         <IconCoin className="my-6 w-12 h-12 text-secondary" />
                         <h2 className="mt-2 text-xl text-white text-left">Fair & Transparent Pricing</h2>
-                        <p className="mt-2 text-md text-main">Render prices are determined by you and all the other members of the hive in a free market via a bid-ask mechanism. We just pass the small fees of the underlying web3 services and do not charge any mandatory fees for our own profit. This ensures that you get a fair price at any time and that your render job is executed at your defined maximum price.</p>
+                        <p className="mt-2 text-md text-main">Render prices are determined by you and all the other hive members in a free market based on supply and demand for render power on the network. We just pass on the small fees of the underlying blockchain services and do not charge any mandatory fees for our own profit. This ensures that you get a fair render price at any time and that your Blender project is rendered on your terms.</p>
                     </div>
-                    <div className="lg:border-t border-secondary text-left lg:p-4">
+                    <div className="lg:w-1/3 lg:border-t border-secondary text-left lg:p-4">
                         <IconGithub className="my-6 w-12 h-12 text-secondary" />
                         <h2 className="mt-2 text-xl text-white text-left">Open Source</h2>
-                        <p className="mt-2 text-md text-main">Renderhive is a transparent, open source project. The software itself will be free and provide a free market for buying and selling render power. This project fully supports Blender's vision that "Everyone should be free to create 3D CG content, with free technical and creative production means and free access to markets."</p>
+                        <p className="mt-2 text-md text-main">Renderhive is a transparent, open source project. The software itself will be free and provide a free market for buying and selling render power. Our project fully supports the vision of the <a href="https://www.blender.org/about/foundation/" className="text-white hover:text-secondary cursor-pointer">Blender Foundation</a>: "Everyone should be free to create 3D CG content, with free technical and creative production means and free access to markets."</p>
                     </div>
                 </div>
 

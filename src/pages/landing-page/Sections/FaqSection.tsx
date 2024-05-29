@@ -22,6 +22,10 @@ const faqs = [
       answer: "Yes, this crowdrendering platform will be specifically designed for Blender. Other 3D computer graphics software will not be supported at release time. However, the project is open-source and the underlying principles can be applied to other renderers as well. So, let's see where the future leads us ...",
     },
     {
+      question: "I have a powerful computer but never used Blender. Can I still sell my CPU or GPU power here?",
+      answer: "Absolutely! You don't need to be a Blender user to join the Renderhive network. You can simply setup a crypto wallet and install the Renderhive software on your computer to start selling your render power to Blender artists. You can set the price for which you want to sell your computers power and the more powerful your computer is, the more you can earn.",
+    },
+    {
       question: "Which render engines will be supported?",
       answer: "At the beginning, Renderhive will only support Blender's native render engines EEVEE and Cycles. In the future we will explore the implementation of third-party engines. However, since the engine needs to be present on render nodes as well, the implementation will mainly depend on how many render nodes can support a specific engine.",
     },
