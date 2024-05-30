@@ -201,7 +201,7 @@ const RoadmapSoftwareSection = () => {
                                     </div>
                                     <div className="flex flex-col space-y-2">
                                         <h3 className="text-md text-white text-center sm:text-left">Render Honey</h3>
-                                        <p className="text-sm text-main text-center sm:text-left">You can also offer your render power for free to the network when you don't need it and then reclaim it later. It's like storing your resources for tough times in the renderhive, just like bees store their honey. Make render honey!</p>
+                                        <p className="text-sm text-main text-center sm:text-left">You can also offer your render power for free to the network when you don't need it and then reclaim it later. It's like storing your resources in the renderhive for tough times, just like bees store their honey. Make render honey!</p>
                                     </div>
                                 </div>
                                 
